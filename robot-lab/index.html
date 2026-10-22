@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07101d">
+  <meta name="description" content="Robot Lab: Parçaları incele, robot kolunu birleştir ve çalıştır. Telefonda etkileşimli 3D deneyim.">
+  <meta property="og:title" content="Robot Lab — Interactive Workcell">
+  <meta property="og:description" content="Parçaları aç. Robotu birleştir. Görevi çalıştır.">
+  <meta property="og:type" content="website">
+  <title>Robot Lab — Fatih</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./assets/app.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand" aria-label="Fatih Robot Lab">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">FATIH<span class="brand-slash">/</span>ROBOT LAB</span>
+      </div>
+      <div class="top-status"><span class="status-light"></span><span>WORKCELL <b>01</b></span></div>
+    </header>
+
+    <main class="main-layout">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> INTERACTIVE MACHINE / 001</div>
+        <h1 id="page-title">ROBOT<br><span>LAB<span class="period">.</span></span></h1>
+        <p class="intro-copy">Parçaları incele. Robotu birleştir.<br>Bir görevi tamamlamasını izle.</p>
+        <div class="intro-rule" aria-hidden="true"><span>01</span><i></i><span>03</span></div>
+      </section>
+
+      <section class="workcell" aria-label="Etkileşimli 3D robot çalışma alanı">
+        <div class="grid-plane" aria-hidden="true"></div>
+        <div class="halo halo-one" aria-hidden="true"></div>
+        <div class="halo halo-two" aria-hidden="true"></div>
+        <div class="stage-glow" aria-hidden="true"></div>
+        <div class="stage-corner top-left" aria-hidden="true"></div>
+        <div class="stage-corner top-right" aria-hidden="true"></div>
+        <div class="stage-corner bottom-left" aria-hidden="true"></div>
+        <div class="stage-corner bottom-right" aria-hidden="true"></div>
+
+        <div class="workcell-top" aria-hidden="true">
+          <span>RL—01 / ASSEMBLY BAY</span>
+          <span class="workcell-mode" id="workcell-mode">SYSTEM READY</span>
+        </div>
+        <canvas id="robot-canvas" aria-label="Parçalarına dokunulabilen 3D robot kolu"></canvas>
+        <div class="part-labels" id="part-labels"></div>
+        <div class="workcell-bottom" aria-hidden="true">
+          <span>↔ <span id="stage-hint">ÇEVİRMEK İÇİN KAYDIR</span></span>
+          <span>3D / LIVE</span>
+        </div>
+        <div class="webgl-fallback" id="webgl-fallback" hidden>
+          <div class="fallback-icon">◆</div>
+          <p>3D görünüm açılamadı.<br>Tarayıcıda donanım hızlandırmayı açıp tekrar deneyin.</p>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Robot kontrolleri">
+        <div class="detail-card">
+          <div class="detail-index" id="detail-index">01 / 05</div>
+          <div class="detail-body">
+            <p class="detail-kicker" id="detail-kicker">ROBOTIC SYSTEM</p>
+            <h2 id="detail-title">KOL HAZIR<span class="detail-arrow">↗</span></h2>
+            <p id="detail-description">Bir parçaya dokunarak incele veya parçaları aç.</p>
+          </div>
+          <div class="progress-bars" id="progress-bars" aria-label="Montaj ilerlemesi">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <div class="control-row" role="group" aria-label="Çalışma adımları">
+          <button class="control-button" id="parts-button" type="button">
+            <span class="control-number">01</span><span class="control-icon" aria-hidden="true">✳</span>
+            <span class="control-name">PARÇALAR</span>
+          </button>
+          <button class="control-button" id="build-button" type="button">
+            <span class="control-number">02</span><span class="control-icon" aria-hidden="true">▦</span>
+            <span class="control-name">BİRLEŞTİR</span>
+          </button>
+          <button class="control-button control-primary" id="run-button" type="button">
+            <span class="control-number">03</span><span class="control-icon play-icon" aria-hidden="true">▶</span>
+            <span class="control-name" id="run-label">ÇALIŞTIR</span>
+          </button>
+        </div>
+
+        <div class="footer-controls">
+          <div class="paint-group" role="group" aria-label="Robot rengi">
+            <span>RENK</span>
+            <button class="paint-swatch selected" data-color="orange" type="button" aria-label="Turuncu" aria-pressed="true" style="--swatch:#ff6539"></button>
+            <button class="paint-swatch" data-color="cyan" type="button" aria-label="Mavi" aria-pressed="false" style="--swatch:#42d9ef"></button>
+            <button class="paint-swatch" data-color="lime" type="button" aria-label="Yeşil" aria-pressed="false" style="--swatch:#c4f05a"></button>
+          </div>
+          <button class="reset-button" id="reset-button" type="button" aria-label="Baştan başlat">↺ <span>SIFIRLA</span></button>
+        </div>
+        <p class="sr-only" id="live-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="site-footer"><span>DESIGNED BY FATIH</span><span>INTERACTIVE EXPERIMENT / 2026</span></footer>
+  </div>
+</body>
+</html>
