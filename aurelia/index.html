@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#251f49" />
+    <meta name="description" content="Enter Aurelia: a luminous journey through a world above the clouds. Explore the dawn, crystal garden, and starlit sky." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aurelia — Beyond the Clouds" />
+    <meta property="og:description" content="A world above the clouds is waiting. Touch the sky and discover three luminous realms." />
+    <meta property="og:image" content="https://fatihyaylacimk.github.io/aurelia/assets/dawn.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preload" href="./assets/dawn.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+    <title>Aurelia — Beyond the Clouds</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#story">Skip to the story</a>
+    <div class="app scene-dawn" id="app">
+      <div class="visual-layer" aria-hidden="true">
+        <div class="scene-visual is-active" data-image="dawn" style="--scene-image:url('./assets/dawn.webp')"></div>
+        <div class="scene-visual" data-image="garden" style="--scene-image:url('./assets/garden.webp')"></div>
+        <div class="scene-visual" data-image="night" style="--scene-image:url('./assets/night.webp')"></div>
+        <div class="color-atmosphere"></div>
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="light-orbit"></div>
+        <div class="readability-veil"></div>
+      </div>
+      <canvas id="particles" aria-hidden="true"></canvas>
+
+      <header class="topbar">
+        <a class="brand" href="#dawn" id="brandLink" aria-label="Aurelia, return to dawn">
+          <span class="brand-symbol" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 1.5 23.8 16.2 38.5 20 23.8 23.8 20 38.5 16.2 23.8 1.5 20 16.2 16.2 20 1.5Z" stroke="currentColor" stroke-width="1.15"/><circle cx="20" cy="20" r="3.2" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-text">AURELIA<small>THE WORLD ABOVE</small></span>
+        </a>
+        <div class="header-actions">
+          <button class="icon-button language-button" id="languageButton" type="button" aria-label="Türkçe diline geç">TR</button>
+          <button class="icon-button" id="soundButton" type="button" aria-label="Turn sound on" aria-pressed="false" title="Sound">
+            <svg class="sound-on-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg class="sound-off-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m17 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <button class="icon-button" id="shareButton" type="button" aria-label="Share Aurelia" title="Share">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="2.3" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="12" r="2.3" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="19" r="2.3" stroke="currentColor" stroke-width="1.6"/><path d="m8 11 7.7-4.8M8 13l7.7 4.8" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="vertical-note" aria-hidden="true"><span class="note-line"></span><span>THREE WORLDS · ONE SKY</span></div>
+
+      <main class="story" id="story" tabindex="-1">
+        <div class="story-inner" id="storyInner" aria-live="polite" aria-atomic="true">
+          <p class="eyebrow"><span class="eyebrow-spark" aria-hidden="true">✦</span><span id="chapter">CHAPTER I — THE AWAKENING</span></p>
+          <h1 class="headline"><span id="headingOne">A world beyond</span><em id="headingTwo">the ordinary.</em></h1>
+          <p class="scene-description" id="description">Step into a place where the clouds carry castles and every horizon feels like a beginning.</p>
+          <button class="explore-button" type="button" id="nextButton"><span class="button-glow" aria-hidden="true"></span><span id="nextLabel">Enter the garden</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-top"><span id="sceneCounter">01 <i>/</i> 03</span><span class="swipe-hint" id="swipeHint">SWIPE TO EXPLORE <span aria-hidden="true">↔</span></span></div>
+        <nav class="chapter-nav" aria-label="Choose a world" id="chapterNav">
+          <button class="chapter-button is-active" type="button" data-scene="0" aria-current="true"><span class="chapter-number">01</span><span class="chapter-name" data-name="dawn">DAWN</span><span class="chapter-progress"></span></button>
+          <button class="chapter-button" type="button" data-scene="1"><span class="chapter-number">02</span><span class="chapter-name" data-name="garden">GARDEN</span><span class="chapter-progress"></span></button>
+          <button class="chapter-button" type="button" data-scene="2"><span class="chapter-number">03</span><span class="chapter-name" data-name="night">NIGHT</span><span class="chapter-progress"></span></button>
+        </nav>
+        <div class="footer-bottom"><span>AN IMMERSIVE EXPERIENCE</span><span>CREATED BY FATIH</span></div>
+      </footer>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+  </body>
+</html>
