@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0867c5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="A playful, immersive journey through an orchard of ideas.">
+  <meta property="og:title" content="Pear — A little wonder grows here">
+  <meta property="og:description" content="Explore the orchard, find the stars, and make a postcard of your own.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="pear-icon.svg">
+  <link rel="preload" href="orchard.webp" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <title>Pear — A little wonder grows here</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+  <header class="site-header light" id="siteHeader">
+    <a href="#home" class="brand" aria-label="Pear, back to the beginning">
+      <svg class="pear-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M25.5 13.2c.5-3.8 2-6.8 5.7-8.6M23.6 14c-1.1-4-3.5-6.5-7.3-7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 15.5c-6.1-5-13.1-2.1-14.6 6.5-1.2 6.5-5.7 9.7-3.5 15.8 2.1 5.9 8.4 8.9 18.1 8.9s16-3 18.1-8.9c2.2-6.1-2.3-9.3-3.5-15.8C37.1 13.4 30.1 10.5 24 15.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M30.5 7.7c1.6-2.1 4.1-3.1 7.7-2.7-.9 3.6-3 5.6-6.8 5.8" fill="currentColor"/></svg>
+      <span>pear<span class="brand-dot">.</span></span>
+    </a>
+    <div class="header-actions">
+      <button class="header-button language-button" id="languageButton" type="button" aria-label="Switch language to Turkish">TR</button>
+      <button class="header-button sound-button" id="soundButton" type="button" aria-label="Turn sound on" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="sound-waves" d="M16 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/><path class="sound-off" d="M16 9l5 6m0-6-5 6"/></svg></button>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="Open menu"><span></span><span></span><span class="menu-label" data-i18n="menu">MENU</span></button>
+    </div>
+  </header>
+  <nav class="menu-panel" id="menuPanel" aria-label="Main navigation" inert>
+    <div class="menu-inner">
+      <p class="overline" data-i18n="explore">EXPLORE THE STORY</p>
+      <a href="#home"><span>01</span><strong data-i18n="navHome">The beginning</strong></a>
+      <a href="#roots"><span>02</span><strong data-i18n="navRoots">The roots</strong></a>
+      <a href="#orchard"><span>03</span><strong data-i18n="navOrchard">The orchard</strong></a>
+      <a href="#sky"><span>04</span><strong data-i18n="navSky">The sky</strong></a>
+      <a href="#postcard"><span>05</span><strong data-i18n="navPostcard">Your postcard</strong></a>
+      <small data-i18n="menuHint">A story made to be touched and explored.</small>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="orchard.webp" alt="Golden pears hanging from sunlit branches beneath a blue sky" fetchpriority="high">
+      <div class="hero-shade"></div><div class="film-grain" aria-hidden="true"></div>
+      <div class="hero-topline"><span data-i18n="heroTop">AN INTERACTIVE STORY</span><span>2026 / 01</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow" data-i18n="heroEyebrow">A little wonder grows here</p>
+        <h1 id="heroTitle" data-i18n-html="heroTitle">Pear makes<br><em>you</em> appear.</h1>
+        <p class="hero-description" data-i18n="heroDescription">Follow the fruit. Find an idea. Make it yours.</p>
+        <a class="round-link hero-link" href="#roots"><span data-i18n="enterStory">ENTER THE STORY</span><span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-bottom"><span data-i18n="scrollDiscover">SCROLL TO DISCOVER</span><span class="scroll-line" aria-hidden="true"></span><span>01 — 05</span></div>
+    </section>
+
+    <section class="roots section-pad" id="roots" aria-labelledby="rootsTitle">
+      <div class="section-number reveal"><span>01 / 05</span><span data-i18n="rootsLabel">THE ROOTS</span></div>
+      <div class="roots-content">
+        <div class="roots-copy reveal">
+          <p class="eyebrow dark" data-i18n="rootsEyebrow">It begins with a small gesture.</p>
+          <h2 id="rootsTitle" data-i18n-html="rootsTitle">Made with<br><em>care.</em></h2>
+          <p data-i18n="rootsDescription">An orchard starts with a patient hand, a living branch, and the belief that something beautiful can grow.</p>
+          <button class="text-action" type="button" id="careToggle" aria-expanded="false" aria-controls="careDetails"><span data-i18n="careAction">EXPLORE THE PROCESS</span><span aria-hidden="true">+</span></button>
+          <div class="care-details" id="careDetails" hidden>
+            <div><b>01</b><strong data-i18n="graft">Graft</strong><p data-i18n="graftText">A new sprig meets an old branch.</p></div>
+            <div><b>02</b><strong data-i18n="tend">Tend</strong><p data-i18n="tendText">Time, light, and attention do their work.</p></div>
+            <div><b>03</b><strong data-i18n="grow">Grow</strong><p data-i18n="growText">What began small becomes something to share.</p></div>
+          </div>
+        </div>
+        <figure class="roots-figure reveal"><img src="grafting.webp" loading="lazy" alt="Hands carefully grafting a young pear sprig onto an older tree branch"><figcaption><span data-i18n="rootsCaption">A new beginning</span><span>FIG. 01</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="orchard" id="orchard" aria-labelledby="orchardTitle">
+      <img class="orchard-image" src="orchard.webp" loading="lazy" alt="Pear orchard with hanging fruit under a brilliant blue sky">
+      <div class="orchard-overlay"></div>
+      <div class="orchard-top reveal"><span>02 / 05</span><span data-i18n="orchardLabel">THE ORCHARD</span></div>
+      <div class="orchard-heading reveal"><p class="eyebrow" data-i18n="orchardEyebrow">A living little world</p><h2 id="orchardTitle" data-i18n-html="orchardTitle">We build it<br><em>together.</em></h2><p data-i18n="orchardDescription">Tap the glowing fruit and collect a little thought along the way.</p></div>
+      <button class="pear-hotspot p1" type="button" data-pear="0" aria-label="Discover pear one"><span>+</span></button>
+      <button class="pear-hotspot p2" type="button" data-pear="1" aria-label="Discover pear two"><span>+</span></button>
+      <button class="pear-hotspot p3" type="button" data-pear="2" aria-label="Discover pear three"><span>+</span></button>
+      <button class="pear-hotspot p4" type="button" data-pear="3" aria-label="Discover pear four"><span>+</span></button>
+      <div class="orchard-bottom"><span data-i18n="tapPears">TAP THE PEARS</span><span class="pear-count" aria-live="polite"><span id="pearCount">0</span> / 4</span></div>
+      <div class="pear-note" id="pearNote" role="status" aria-live="polite" hidden><button id="pearNoteClose" type="button" aria-label="Close note">×</button><span class="note-kicker" data-i18n="aLittleThought">A LITTLE THOUGHT</span><p id="pearNoteText"></p></div>
+    </section>
+
+    <section class="muse section-pad" id="muse" aria-labelledby="museTitle">
+      <div class="section-number reveal"><span>03 / 05</span><span data-i18n="museLabel">THE MUSE</span></div>
+      <div class="muse-grid">
+        <div class="muse-copy reveal"><p class="eyebrow dark" data-i18n="museEyebrow">An idea worth passing on</p><h2 id="museTitle" data-i18n-html="museTitle">The best things<br>are <em>shared.</em></h2><p data-i18n="museDescription">One fruit can become a story, a gathering, or the beginning of an entirely new thought.</p><a class="text-action" href="#sky"><span data-i18n="lookUp">LOOK A LITTLE HIGHER</span><span aria-hidden="true">↗</span></a></div>
+        <figure class="muse-figure reveal"><img src="muse.webp" loading="lazy" alt="Renaissance-inspired painting of a figure contemplating a golden pear"><figcaption><span data-i18n="museCaption">The art of noticing</span><span>FIG. 02</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="sky" id="sky" aria-labelledby="skyTitle">
+      <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="cloud cloud-three" aria-hidden="true"></div>
+      <div class="sky-head reveal"><div class="section-number"><span>04 / 05</span><span data-i18n="skyLabel">THE SKY</span></div><p class="eyebrow" data-i18n="skyEyebrow">Every idea starts somewhere</p><h2 id="skyTitle" data-i18n-html="skyTitle">What will <em>you</em><br>make grow?</h2><p data-i18n="skyDescription">Touch the lights. Connect five little possibilities.</p></div>
+      <div class="constellation" id="constellation" aria-label="Interactive constellation with five stars">
+        <svg class="constellation-lines" id="starLines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline id="starPolyline" points=""></polyline></svg>
+        <button class="star star-one" type="button" data-star="0" aria-label="Discover imagination"><span></span></button>
+        <button class="star star-two" type="button" data-star="1" aria-label="Discover courage"><span></span></button>
+        <button class="star star-three" type="button" data-star="2" aria-label="Discover patience"><span></span></button>
+        <button class="star star-four" type="button" data-star="3" aria-label="Discover wonder"><span></span></button>
+        <button class="star star-five" type="button" data-star="4" aria-label="Discover connection"><span></span></button>
+      </div>
+      <div class="sky-result" aria-live="polite"><span id="starProgress">0 / 5</span><p id="starMessage" data-i18n="skyPrompt">Choose a star to begin.</p><a href="#postcard" id="skyContinue" class="sky-continue" hidden><span data-i18n="makePostcard">MAKE A POSTCARD</span><span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="postcard section-pad" id="postcard" aria-labelledby="postcardTitle">
+      <div class="section-number reveal"><span>05 / 05</span><span data-i18n="postcardLabel">YOUR TURN</span></div>
+      <div class="postcard-grid">
+        <div class="postcard-copy reveal"><p class="eyebrow dark" data-i18n="postcardEyebrow">Take a little wonder with you</p><h2 id="postcardTitle" data-i18n-html="postcardTitle">Make it<br><em>yours.</em></h2><p data-i18n="postcardDescription">Write a thought for someone. Make a card, then share its link straight from your phone.</p>
+          <form id="postcardForm">
+            <label for="senderName" data-i18n="nameLabel">YOUR NAME</label><input id="senderName" name="name" type="text" maxlength="32" autocomplete="name" placeholder="Your name" required>
+            <label for="postcardMessage" data-i18n="messageLabel">YOUR MESSAGE</label><textarea id="postcardMessage" name="message" maxlength="150" rows="3" placeholder="A little thought to share..." required></textarea>
+            <button class="submit-button" type="submit"><span data-i18n="createCard">CREATE YOUR POSTCARD</span><span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+        <div class="postcard-preview reveal" id="cardPreview" aria-live="polite"><div class="card-ornament" aria-hidden="true"><svg viewBox="0 0 100 120"><path d="M52 28c1-11 7-19 19-22M48 31c-2-9-8-14-17-16" fill="none" stroke="currentColor" stroke-width="2"/><path d="M50 30c-22-16-39-1-39 26C11 80 3 91 17 107c12 14 54 14 66 0 14-16 6-27 6-51 0-27-17-42-39-26Z" fill="currentColor"/></svg></div><span class="card-top" data-i18n="cardTop">A NOTE FROM THE ORCHARD</span><blockquote id="cardQuote">A little wonder<br>grows here.</blockquote><span class="card-from" id="cardFrom">— pear.</span><span class="card-bottom">PEAR / 2026</span></div>
+      </div>
+      <div class="share-bar" id="shareBar" hidden><p data-i18n="cardReady">Your postcard is ready.</p><button id="shareButton" type="button" data-i18n="shareCard">SHARE YOUR LINK ↗</button><button id="copyButton" type="button" data-i18n="copyLink">COPY LINK</button><span id="shareStatus" role="status" aria-live="polite"></span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a href="#home" class="footer-brand">pear<span>.</span></a><p data-i18n="footerLine">A little wonder grows here.</p><a href="#home" class="back-top" data-i18n="backTop">BACK TO TOP ↑</a><small>© 2026 PEAR</small></footer>
+  <noscript><p class="noscript">Enable JavaScript to use the interactive orchard, constellation, and postcard.</p></noscript>
+</body>
+</html>
