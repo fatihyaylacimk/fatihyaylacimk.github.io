@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="The Notturno Experience — dokunarak ilerleyen sinematik bir çizgi roman deneyimi.">
+  <meta property="og:title" content="The Notturno Experience — Fatih">
+  <meta property="og:description" content="Geçitten geç, ruhunu seç, geceyi keşfet.">
+  <meta property="og:image" content="https://fatihyaylacimk.github.io/notturno/assets/01-title.webp">
+  <title>The Notturno Experience — Fatih</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./assets/01-title.webp">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="experience" id="experience" aria-label="The Notturno Experience">
+    <div class="stage stage--dark" id="stage">
+      <div class="art art--current" id="art-current" role="img" aria-label=""></div>
+      <div class="art art--incoming" id="art-incoming" aria-hidden="true"></div>
+      <video class="motion" id="motion" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="ink-wipe" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="edge edge--top" aria-hidden="true"></div>
+      <div class="edge edge--bottom" aria-hidden="true"></div>
+
+      <header class="masthead">
+        <a class="identity" href="#start" id="home-link" aria-label="Başa dön">
+          <span class="identity-mark">N<span class="identity-ring">◯</span></span>
+          <span class="identity-text">THE<br>NOTTURNO<br>EXPERIENCE</span>
+        </a>
+        <div class="top-actions">
+          <span class="edition" id="edition">AN INTERACTIVE STORY</span>
+          <button type="button" class="language" id="language" aria-label="Change language"><span id="language-label">EN</span><span class="language-arrow">↗</span></button>
+        </div>
+      </header>
+
+      <section class="content" aria-live="polite" aria-atomic="true">
+        <div class="chapter" id="chapter">PROLOGUE / 00</div>
+        <div class="copy-box" id="copy-box">
+          <span class="copy-corner copy-corner--a" aria-hidden="true"></span>
+          <span class="copy-corner copy-corner--b" aria-hidden="true"></span>
+          <p id="caption"></p>
+        </div>
+        <div class="interaction" id="interaction"></div>
+      </section>
+
+      <div class="intro" id="intro">
+        <p id="intro-eyebrow">BİR GECENİN BAŞLANGICI</p>
+        <button class="enter-button" id="enter" type="button">
+          <span id="enter-text">DENEYİME BAŞLA</span><span class="enter-arrow">↗</span>
+        </button>
+        <p class="intro-hint" id="intro-hint">Ses olmadan oynatılır · Ekranı kaydırarak ilerle</p>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="timeline"><span id="timeline-fill"></span></div>
+        <div class="bottom-row">
+          <div class="scene-count" id="scene-count">01 <span>/ 18</span></div>
+          <div class="navigation">
+            <button type="button" id="previous" aria-label="Önceki sahne" disabled>←</button>
+            <span class="navigation-hint" id="navigation-hint">KAYDIR / SCROLL</span>
+            <button type="button" id="next" aria-label="Sonraki sahne">→</button>
+          </div>
+          <button type="button" id="menu-button" class="menu-button" aria-label="Bilgi">⋮</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <dialog id="info-dialog" class="info-dialog">
+    <button type="button" id="close-dialog" class="close-dialog" aria-label="Kapat">×</button>
+    <span class="info-kicker" id="info-kicker">GÖRSEL ÇALIŞMA</span>
+    <h2>THE NOTTURNO<br>EXPERIENCE</h2>
+    <p id="info-copy">Videodaki çizgi roman sahne akışını telefon için yeniden kurgulayan etkileşimli bir çalışma.</p>
+    <p class="credit">Original experience: <a href="https://santionispirits.com/" target="_blank" rel="noopener noreferrer">Santioni Spirits</a> · <a href="https://activetheory.com/" target="_blank" rel="noopener noreferrer">Active Theory</a></p>
+  </dialog>
+</body>
+</html>
