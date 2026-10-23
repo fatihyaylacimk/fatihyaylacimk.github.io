@@ -1,6 +1,6 @@
 (() => {
   const scenes = [
-    {file:'01-title',tone:'dark',x:50,m:50,chapter:'PROLOGUE / 00',tr:'Gecenin ötesinde bir hikâye başlıyor.',en:'A story begins beyond the night.'},
+    {file:'01-title-v2',tone:'dark',x:50,m:50,chapter:'PROLOGUE / 00',tr:'Gecenin ötesinde bir hikâye başlıyor.',en:'A story begins beyond the night.'},
     {file:'02-wanderer',tone:'light',x:50,m:51,chapter:'I / 01',tr:'Issız bir dünyada yalnız bir gezgin yürür.',en:'A lone wanderer crosses a desolate world.'},
     {file:'03-saint',tone:'light',x:50,m:56,chapter:'I / 02',tr:'Yol, henüz adını bilmediği bir yere uzanır.',en:'The path leads somewhere he cannot yet name.'},
     {file:'04-sphere',tone:'light',x:50,m:69,chapter:'I / 03',tr:'Uzakta, beklenmedik bir şekil belirir.',en:'In the distance, an unexpected shape appears.'},
