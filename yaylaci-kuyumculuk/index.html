@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#210e14">
-  <meta name="description" content="Yaylacı Kuyumculuk. Her anınıza eşlik eden bir ışıltı. Malatya Kapalı Çarşı'da bizi ziyaret edin.">
-  <meta property="og:title" content="Yaylacı Kuyumculuk | Malatya Kapalı Çarşı">
+  <meta name="description" content="Yaylacı Kuyumculuk. Her anınıza eşlik eden bir ışıltı. Malatya İnönü Kapalı Çarşısı'nda bizi ziyaret edin.">
+  <meta property="og:title" content="Yaylacı Kuyumculuk | Malatya İnönü Kapalı Çarşısı">
   <meta property="og:description" content="Her anınıza eşlik eden bir ışıltı. Yüzük, bilezik, küpe ve kolye ilhamı.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:image" content="https://fatihyaylacimk.github.io/yaylaci-kuyumculuk/assets/hero.webp">
   <meta property="og:url" content="https://fatihyaylacimk.github.io/yaylaci-kuyumculuk/">
-  <title>Yaylacı Kuyumculuk | Malatya Kapalı Çarşı</title>
+  <link rel="canonical" href="https://fatihyaylacimk.github.io/yaylaci-kuyumculuk/">
+  <title>Yaylacı Kuyumculuk | Malatya İnönü Kapalı Çarşısı</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preload" href="assets/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
@@ -37,7 +38,11 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-picture"><img src="assets/hero.webp" alt="Bordo kadife üzerinde altın bileziklerin yakın çekimi" width="1536" height="1024" fetchpriority="high"></div>
+      <div class="hero-picture" aria-hidden="true">
+        <img class="hero-slide is-active" src="assets/hero.webp" alt="" width="1536" height="1024" fetchpriority="high">
+        <img class="hero-slide" src="assets/hero-necklace.webp" alt="" width="1672" height="941">
+        <img class="hero-slide" src="assets/hero-bands.webp" alt="" width="1672" height="941">
+      </div>
       <div class="hero-shade"></div>
       <div class="hero-copy">
         <p class="eyebrow hero-eyebrow"><span></span> MALATYA · KAPALI ÇARŞI</p>
@@ -47,7 +52,7 @@
       </div>
       <div class="hero-bottom">
         <a href="#koleksiyon" class="scroll-link"><span class="scroll-line" aria-hidden="true"></span> AŞAĞIYA KAYDIRIN</a>
-        <div class="hero-caption"><span>YAYLACI KUYUMCULUK</span><button id="motion-button" type="button" aria-pressed="false" aria-label="Görsel hareketini duraklat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
+        <div class="hero-caption"><span>YAYLACI KUYUMCULUK</span><div class="hero-pagination" role="group" aria-label="Açılış görselleri"><button type="button" class="hero-dot is-active" data-slide="0" aria-label="İlk görsel" aria-current="true"></button><button type="button" class="hero-dot" data-slide="1" aria-label="İkinci görsel"></button><button type="button" class="hero-dot" data-slide="2" aria-label="Üçüncü görsel"></button></div><button id="motion-button" type="button" aria-pressed="false" aria-label="Görsel geçişlerini duraklat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
       </div>
     </section>
 
@@ -59,50 +64,72 @@
         <p>Altı farklı detay, sayısız hikâye.<br>Size hitap eden parçayı keşfedin.</p>
       </div>
       <div class="collection-grid">
-        <button class="collection-item collection-item-ring" type="button" data-gallery="0" aria-label="Yüzük görselini büyüt">
+        <a class="collection-item collection-item-ring" href="koleksiyon/yuzukler/" aria-label="Yüzükler sayfasını keşfet">
           <span class="collection-photo"><img src="assets/ring.webp" alt="Doğal taş üzerinde zarif altın yüzük" width="1024" height="1280" loading="lazy"><span class="photo-index">01 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Yüzükler</span><span class="item-subtitle">Bir başlangıcın ışığı</span></span>
-        </button>
-        <button class="collection-item collection-item-earrings" type="button" data-gallery="1" aria-label="Küpe görselini büyüt">
+        </a>
+        <a class="collection-item collection-item-earrings" href="koleksiyon/kupeler/" aria-label="Küpeler sayfasını keşfet">
           <span class="collection-photo"><img src="assets/earrings.webp" alt="Traverten taş ve bordo kadife üzerinde altın küpeler" width="1122" height="1402" loading="lazy"><span class="photo-index">02 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Küpeler</span><span class="item-subtitle">Her bakışta bir detay</span></span>
-        </button>
-        <button class="collection-item collection-item-bangle" type="button" data-gallery="2" aria-label="Bilezik görselini büyüt">
+        </a>
+        <a class="collection-item collection-item-bangle" href="koleksiyon/bilezikler/" aria-label="Bilezikler sayfasını keşfet">
           <span class="collection-photo"><img src="assets/bangle.webp" alt="Koyu taş üzerinde dokulu altın bilezik" width="1122" height="1402" loading="lazy"><span class="photo-index">03 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Bilezikler</span><span class="item-subtitle">Zamansız bir dokunuş</span></span>
-        </button>
-        <button class="collection-item collection-item-necklace" type="button" data-gallery="3" aria-label="Kolye görselini büyüt">
+        </a>
+        <a class="collection-item collection-item-necklace" href="koleksiyon/kolyeler/" aria-label="Kolyeler sayfasını keşfet">
           <span class="collection-photo"><img src="assets/necklace.webp" alt="Bordo kadife üzerine serilmiş altın kolye" width="1024" height="1280" loading="lazy"><span class="photo-index">04 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Kolyeler</span><span class="item-subtitle">Hep size yakın</span></span>
-        </button>
-        <button class="collection-item collection-item-bands" type="button" data-gallery="4" aria-label="Alyans görselini büyüt">
+        </a>
+        <a class="collection-item collection-item-bands" href="koleksiyon/alyanslar/" aria-label="Alyanslar sayfasını keşfet">
           <span class="collection-photo"><img src="assets/bands.webp" alt="Traverten taş üzerinde iki altın alyans" width="1122" height="1402" loading="lazy"><span class="photo-index">05 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Alyanslar</span><span class="item-subtitle">Birlikte atılan adımlar</span></span>
-        </button>
-        <button class="collection-item collection-item-bracelet" type="button" data-gallery="5" aria-label="Bileklik görselini büyüt">
+        </a>
+        <a class="collection-item collection-item-bracelet" href="koleksiyon/bileklikler/" aria-label="Bileklikler sayfasını keşfet">
           <span class="collection-photo"><img src="assets/bracelet.webp" alt="Açık renk taş üzerinde ince altın bileklik" width="1122" height="1402" loading="lazy"><span class="photo-index">06 / 06</span><span class="expand-icon" aria-hidden="true">↗</span></span>
           <span class="item-label"><span>Bileklikler</span><span class="item-subtitle">Günlük zarafetin izi</span></span>
-        </button>
+        </a>
       </div>
       <p class="collection-note">Görseller koleksiyon ilhamı içindir. Güncel ürünleri mağazamızda inceleyebilirsiniz.</p>
     </section>
 
     <section class="guide" id="secim-rehberi" aria-labelledby="guide-title">
       <div class="guide-heading section-wrap">
-        <p class="eyebrow dark-eyebrow">SEÇİM REHBERİ</p>
-        <h2 id="guide-title">Hangi an için<br><em>bir ışıltı?</em></h2>
-        <p>Bir duygu seçin, size ilham verecek detaya birlikte bakalım.</p>
+        <p class="eyebrow dark-eyebrow">HEDİYE SEÇİM REHBERİ</p>
+        <h2 id="guide-title">Doğru his,<br><em>doğru detay.</em></h2>
+        <p>Üç küçük seçim yapın. Size uygun bir koleksiyon fikri gösterelim.</p>
       </div>
       <div class="guide-layout">
-        <div class="guide-options" role="tablist" aria-label="Özel an seçimi">
-          <button class="guide-tab" id="guide-tab-0" type="button" role="tab" aria-controls="guide-panel" aria-selected="true" tabindex="0" data-guide="0"><span>01</span><strong>Yeni bir başlangıç</strong><span aria-hidden="true">↗</span></button>
-          <button class="guide-tab" id="guide-tab-1" type="button" role="tab" aria-controls="guide-panel" aria-selected="false" tabindex="-1" data-guide="1"><span>02</span><strong>İçten bir hediye</strong><span aria-hidden="true">↗</span></button>
-          <button class="guide-tab" id="guide-tab-2" type="button" role="tab" aria-controls="guide-panel" aria-selected="false" tabindex="-1" data-guide="2"><span>03</span><strong>Kendinize bir an</strong><span aria-hidden="true">↗</span></button>
-          <p class="guide-aside">Her seçim kişiseldir. Fotoğraflar yalnızca ilham vermek içindir.</p>
-        </div>
-        <div class="guide-panel" id="guide-panel" role="tabpanel" aria-labelledby="guide-tab-0" tabindex="0">
-          <div class="guide-visual"><img id="guide-image" src="assets/bands.webp" alt="Traverten üzerinde iki altın alyans" width="1122" height="1402" loading="lazy"><span class="guide-visual-number" id="guide-number">01 / 03</span></div>
-          <div class="guide-result"><p class="eyebrow dark-eyebrow" id="guide-kicker">BİRLİKTE BAŞLAYAN HİKÂYELER</p><h3 id="guide-result-title">Bir söz, iki hayat.</h3><p id="guide-result-copy">Birlikte atılan ilk adımı hatırlatan sade bir detay. Alyans ve yüzük ilhamına yakından bakın.</p><button class="guide-open" id="guide-open" type="button" data-gallery="4">Görseli yakından inceleyin <span aria-hidden="true">↗</span></button></div>
+        <form class="guide-choices" id="gift-form">
+          <fieldset>
+            <legend><span>01</span> Kimin için?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="recipient" value="partner" checked><span>Sevgilim / eşim</span></label>
+              <label><input type="radio" name="recipient" value="family"><span>Ailemden biri</span></label>
+              <label><input type="radio" name="recipient" value="friend"><span>Bir arkadaşım</span></label>
+              <label><input type="radio" name="recipient" value="self"><span>Kendim için</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span>02</span> Hangi an?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="occasion" value="anniversary" checked><span>Özel bir gün</span></label>
+              <label><input type="radio" name="occasion" value="birthday"><span>Doğum günü</span></label>
+              <label><input type="radio" name="occasion" value="everyday"><span>İçimden geldi</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span>03</span> Nasıl bir tarz?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="style" value="classic" checked><span>Zamansız</span></label>
+              <label><input type="radio" name="style" value="minimal"><span>Sade</span></label>
+              <label><input type="radio" name="style" value="bold"><span>Dikkat çeken</span></label>
+            </div>
+          </fieldset>
+          <p class="guide-aside">Bu bir ilham önerisi. Son kararı parçaları yakından görerek verebilirsiniz.</p>
+        </form>
+        <div class="guide-panel" id="guide-panel" aria-live="polite">
+          <div class="guide-visual"><img id="guide-image" src="assets/bands.webp" alt="Traverten üzerinde iki altın alyans" width="1122" height="1402" loading="lazy"><span class="guide-visual-number" id="guide-number">SİZE ÖZEL İLHAM</span></div>
+          <div class="guide-result"><p class="eyebrow dark-eyebrow" id="guide-kicker">ÖZEL BİR GÜN · ZAMANSIZ</p><h3 id="guide-result-title">Alyanslar</h3><p id="guide-result-copy">Birlikte kurulan hikâyeye eşlik edecek zamansız bir detay. Farklı formları yakından inceleyin.</p><a class="guide-open" id="guide-open" href="koleksiyon/alyanslar/">Alyansları keşfedin <span aria-hidden="true">↗</span></a><button class="guide-preview" id="guide-preview" type="button" data-gallery="4">Görseli büyüt +</button></div>
         </div>
       </div>
     </section>
@@ -114,29 +141,29 @@
           <p class="eyebrow">KÜÇÜK BİR DETAY, BÜYÜK BİR HİS</p>
           <h2 id="editorial-title">Bazı anlar<br>geçer.<br><em>Işıltısı kalır.</em></h2>
           <p>Bir kutlamada, bir teşekkürde ya da sadece kendiniz için. Seçtiğiniz parçanın anlamı, onu taşıdığınız anda başlar.</p>
-          <a class="text-link" href="#magaza">Malatya Kapalı Çarşı'da buluşalım <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#magaza">Malatya İnönü Kapalı Çarşısı'nda buluşalım <span aria-hidden="true">↗</span></a>
         </div>
         <span class="editorial-ornament" aria-hidden="true">Y</span>
       </div>
     </section>
 
     <section class="visit section-wrap" id="magaza" aria-labelledby="visit-title">
-      <div class="visit-heading"><p class="eyebrow dark-eyebrow">SİZİ BEKLİYORUZ</p><h2 id="visit-title">Işıltıyı <em>yakından</em><br>keşfedin.</h2><p>Yaylacı Kuyumculuk'u Malatya Kapalı Çarşı'da ziyaret edin. Sizin için anlamlı olan detayı birlikte bulalım.</p></div>
+      <div class="visit-heading"><p class="eyebrow dark-eyebrow">SİZİ BEKLİYORUZ</p><h2 id="visit-title">Işıltıyı <em>yakından</em><br>keşfedin.</h2><p>Yaylacı Kuyumculuk'u Malatya İnönü Kapalı Çarşısı'nda ziyaret edin. Sizin için anlamlı olan detayı birlikte bulalım.</p><div class="visit-lines"><div><span>01</span><p>Konumu haritada açın.</p></div><div><span>02</span><p>İlginizi çeken parçaları yerinde inceleyin.</p></div><div><span>03</span><p>Ölçü ve detaylar için mağazada görüşelim.</p></div></div></div>
       <div class="address-card">
         <div class="location-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 43s14-14 14-25a14 14 0 0 0-28 0c0 11 14 25 14 25Z" stroke="currentColor" stroke-width="1.2"/><circle cx="24" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/></svg></div>
         <p class="eyebrow dark-eyebrow">MAĞAZAMIZ</p>
         <h3>Yaylacı Kuyumculuk</h3>
-        <address>Kapalı Çarşı<br>Malatya</address>
-        <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Malatya%20Kapal%C4%B1%20%C3%87ar%C5%9F%C4%B1" target="_blank" rel="noopener noreferrer">Haritada aç <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekme)</span></a>
+        <address>İnönü Kapalı Çarşısı<br>Malatya</address>
+        <a class="button button-dark" href="https://share.google/KNDP8O3Lm4f9mSGGD" target="_blank" rel="noopener noreferrer">Haritada aç <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekme)</span></a>
         <button class="copy-address" id="copy-address" type="button">Adresi kopyala <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor"/><path d="M10 3V2H2v8h1" stroke="currentColor"/></svg></button>
-        <p class="map-note">Harita bağlantısı Malatya Kapalı Çarşı bölgesini açar.</p>
+        <p class="map-note">Konum bağlantısı daha önce paylaştığınız harita adresini açar.</p>
         <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-top"><a class="footer-tag" href="#main">YAYLACI KUYUMCULUK</a><p>MALATYA · KAPALI ÇARŞI</p><a href="#main" class="back-top">Başa dön <span aria-hidden="true">↑</span></a></div>
+    <div class="footer-top"><a class="footer-tag" href="#main">YAYLACI KUYUMCULUK</a><p>MALATYA · İNÖNÜ KAPALI ÇARŞISI</p><a href="#main" class="back-top">Başa dön <span aria-hidden="true">↑</span></a></div>
     <p class="footer-wordmark" aria-hidden="true">YAYLACI</p>
     <div class="footer-bottom"><span>Her anınıza eşlik eden bir ışıltı.</span><span>Görseller temsili olarak oluşturulmuştur; mağazadaki ürünleri göstermez.</span></div>
   </footer>

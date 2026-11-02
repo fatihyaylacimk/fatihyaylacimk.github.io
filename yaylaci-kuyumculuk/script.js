@@ -25,12 +25,40 @@ document.addEventListener('click', event => {
 });
 
 const motionButton = document.getElementById('motion-button');
+const hero = document.querySelector('.hero');
+const heroSlides = [...document.querySelectorAll('.hero-slide')];
+const heroDots = [...document.querySelectorAll('.hero-dot')];
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let slideIndex = 0;
+let slideTimer;
+function showSlide(index) {
+  slideIndex = (index + heroSlides.length) % heroSlides.length;
+  heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === slideIndex));
+  heroDots.forEach((dot, i) => {
+    dot.classList.toggle('is-active', i === slideIndex);
+    if (i === slideIndex) dot.setAttribute('aria-current', 'true');
+    else dot.removeAttribute('aria-current');
+  });
+}
+function scheduleSlides() {
+  clearInterval(slideTimer);
+  if (!hero.classList.contains('motion-paused') && !reducedMotion.matches) {
+    slideTimer = setInterval(() => showSlide(slideIndex + 1), 6500);
+  }
+}
+heroDots.forEach(dot => dot.addEventListener('click', () => {
+  showSlide(Number(dot.dataset.slide));
+  scheduleSlides();
+}));
 motionButton.addEventListener('click', () => {
-  const paused = document.querySelector('.hero').classList.toggle('motion-paused');
+  const paused = hero.classList.toggle('motion-paused');
   motionButton.setAttribute('aria-pressed', String(paused));
-  motionButton.setAttribute('aria-label', paused ? 'Görsel hareketini sürdür' : 'Görsel hareketini duraklat');
+  motionButton.setAttribute('aria-label', paused ? 'Görsel geçişlerini sürdür' : 'Görsel geçişlerini duraklat');
   motionButton.querySelector('path').setAttribute('d', paused ? 'm7 4 8 6-8 6Z' : 'M7 5v10M13 5v10');
+  scheduleSlides();
 });
+reducedMotion.addEventListener('change', scheduleSlides);
+scheduleSlides();
 
 const galleryItems = [
   {title: 'Yüzükler', subtitle: 'Bir başlangıcın ışığı', image: 'assets/ring.webp', alt: 'Doğal taş üzerinde zarif altın yüzük'},
@@ -97,45 +125,48 @@ zoomButton.addEventListener('click', () => {
 });
 document.getElementById('gallery-visit').addEventListener('click', () => gallery.close());
 
-const guideItems = [
-  {kicker: 'BİRLİKTE BAŞLAYAN HİKÂYELER', title: 'Bir söz, iki hayat.', copy: 'Birlikte atılan ilk adımı hatırlatan sade bir detay. Alyans ve yüzük ilhamına yakından bakın.', image: 'assets/bands.webp', alt: 'Traverten üzerinde iki altın alyans', gallery: 4},
-  {kicker: 'İÇTEN GELEN BİR HEDİYE', title: 'Hatırlanacak bir an.', copy: 'Bazen küçük bir kutu, söylemek istediğiniz her şeyi anlatır. Küpe ilhamına yakından bakın.', image: 'assets/earrings.webp', alt: 'Traverten ve kadife üzerinde altın küpeler', gallery: 1},
-  {kicker: 'KENDİNİZE AYIRDIĞINIZ AN', title: 'Işıltı sizinle başlar.', copy: 'Günlük stilinize eşlik eden ince bir çizgi. Bileklik ilhamına yakından bakın.', image: 'assets/bracelet.webp', alt: 'Açık renk taş üzerinde ince altın bileklik', gallery: 5}
+const giftForm = document.getElementById('gift-form');
+const giftPaths = {
+  partner: {anniversary: 4, birthday: 3, everyday: 0},
+  family: {anniversary: 2, birthday: 1, everyday: 5},
+  friend: {anniversary: 1, birthday: 5, everyday: 3},
+  self: {anniversary: 0, birthday: 2, everyday: 5}
+};
+const giftCopy = [
+  'Ölçü ve formun birlikte seçilmesi yüzükte fark yaratır. Sade çizgilerden başlayın.',
+  'Yüzü çevreleyen küçük bir ayrıntı, bütün görünümü değiştirebilir. Küpe ilhamına bakın.',
+  'Bilekte güçlü bir çizgi arayanlar için bilezik formlarına yakından bakın.',
+  'Boyna yakın bir hat ya da daha uzun bir siluet: Kolye seçiminde uzunluk kadar his de önemlidir.',
+  'Birlikte kurulan hikâyeye eşlik edecek zamansız bir detay. Farklı formları yakından inceleyin.',
+  'Gün içinde kolayca eşlik eden ince bir çizgi. Bileklik detaylarından ilham alın.'
 ];
-const guideTabs = [...document.querySelectorAll('.guide-tab')];
-const guidePanel = document.getElementById('guide-panel');
-function selectGuide(index, focus = false) {
-  const item = guideItems[index];
-  guideTabs.forEach((tab, i) => {
-    tab.setAttribute('aria-selected', String(i === index));
-    tab.tabIndex = i === index ? 0 : -1;
-  });
-  guidePanel.setAttribute('aria-labelledby', guideTabs[index].id);
+const occasions = {anniversary: 'ÖZEL BİR GÜN', birthday: 'DOĞUM GÜNÜ', everyday: 'İÇİMDEN GELDİ'};
+const styles = {classic: 'ZAMANSIZ', minimal: 'SADE', bold: 'DİKKAT ÇEKEN'};
+const slugs = ['yuzukler', 'kupeler', 'bilezikler', 'kolyeler', 'alyanslar', 'bileklikler'];
+function updateGift() {
+  const choices = new FormData(giftForm);
+  const recipient = choices.get('recipient');
+  const occasion = choices.get('occasion');
+  const style = choices.get('style');
+  let index = giftPaths[recipient][occasion];
+  if (style === 'minimal' && [2, 4].includes(index)) index = recipient === 'partner' ? 0 : 5;
+  if (style === 'bold' && [0, 5].includes(index)) index = recipient === 'self' ? 2 : 1;
+  const item = galleryItems[index];
   document.getElementById('guide-image').src = item.image;
   document.getElementById('guide-image').alt = item.alt;
-  document.getElementById('guide-number').textContent = String(index + 1).padStart(2, '0') + ' / 03';
-  document.getElementById('guide-kicker').textContent = item.kicker;
+  document.getElementById('guide-kicker').textContent = occasions[occasion] + ' · ' + styles[style];
   document.getElementById('guide-result-title').textContent = item.title;
-  document.getElementById('guide-result-copy').textContent = item.copy;
-  document.getElementById('guide-open').dataset.gallery = String(item.gallery);
-  if (focus) guideTabs[index].focus();
+  document.getElementById('guide-result-copy').textContent = giftCopy[index];
+  const link = document.getElementById('guide-open');
+  link.href = 'koleksiyon/' + slugs[index] + '/';
+  link.firstChild.textContent = item.title + ' koleksiyonunu keşfedin ';
+  document.getElementById('guide-preview').dataset.gallery = String(index);
 }
-guideTabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => selectGuide(index));
-  tab.addEventListener('keydown', event => {
-    let next;
-    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % guideTabs.length;
-    else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + guideTabs.length - 1) % guideTabs.length;
-    else if (event.key === 'Home') next = 0;
-    else if (event.key === 'End') next = guideTabs.length - 1;
-    else return;
-    event.preventDefault();
-    selectGuide(next, true);
-  });
-});
+giftForm.addEventListener('change', updateGift);
+updateGift();
 
 document.getElementById('copy-address').addEventListener('click', async () => {
-  const address = 'Yaylacı Kuyumculuk, Kapalı Çarşı, Malatya';
+  const address = 'Yaylacı Kuyumculuk, İnönü Kapalı Çarşısı, Malatya';
   const status = document.getElementById('copy-status');
   try {
     await navigator.clipboard.writeText(address);
