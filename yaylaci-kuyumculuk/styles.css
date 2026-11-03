@@ -168,3 +168,37 @@
 @media(max-width:1100px){.guide-layout{grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:4%}.guide-panel,.guide-visual{min-height:540px}.guide-result{padding:40px 8%}}
 @media(max-width:760px){.hero-picture .hero-slide{object-position:68% 50%}.hero-pagination{margin-left:1px;gap:2px}.hero-dot{width:17px;height:20px}.guide-layout{display:flex;flex-direction:column;gap:30px}.guide-choices fieldset{padding:20px 0}.guide-choices legend{font-size:21px}.guide-choices .guide-aside{display:block;font-size:10px;margin-top:22px}.guide-panel{width:100%;min-height:0}.guide-visual{height:390px;min-height:0}.guide-result{min-height:0}.visit-lines{margin-top:28px}.visit-lines p{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.hero-picture .hero-slide{transition:none;animation:none}.hero-dot:before{transition:none}}
+
+/* Ad-led stories */
+.hero-actions{display:flex;align-items:center;gap:29px;flex-wrap:wrap}
+.hero-location{display:inline-flex;align-items:center;gap:19px;border-bottom:1px solid #b89b71;padding:13px 0;color:#e4d1b7;font-size:12px}
+.hero-location span{font-size:20px}
+.campaigns{padding-top:125px;padding-bottom:125px;background:#f6f1e9}
+.campaigns-heading{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:52px}
+.campaigns-heading h2{font-size:clamp(48px,5vw,76px);line-height:1.08;letter-spacing:-2.6px;margin-top:17px}
+.campaigns-heading h2 em{color:#977747}
+.campaigns-heading>p{max-width:270px;font-size:13px;line-height:1.85;color:#776b60;padding-bottom:8px}
+.campaign-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.campaign-card{position:relative;min-height:610px;overflow:hidden;background:#28131a;color:#f7efe5}
+.campaign-card-wide{grid-column:1/-1;min-height:610px}
+.campaign-card:before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,#1e0e13e6,transparent 60%),linear-gradient(90deg,#210f17a3,transparent 65%);pointer-events:none}
+.campaign-card-wide:before{background:linear-gradient(90deg,#251015f5,#251015a1 43%,transparent 80%),linear-gradient(0deg,#2510158a,transparent 40%)}
+.campaign-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.3,1)}
+.campaign-card:hover img{transform:scale(1.045)}
+.campaign-card-wide img{object-position:center 55%}
+.campaign-card-content{position:absolute;z-index:2;left:8%;right:8%;bottom:8%}
+.campaign-card-wide .campaign-card-content{left:7.5%;right:45%;bottom:13%}
+.campaign-card-content>p{font-size:10px;letter-spacing:2.7px;color:#e2bb7d}
+.campaign-card h3{font-size:clamp(45px,4.5vw,72px);line-height:1.08;letter-spacing:-1.8px;margin:20px 0 29px}
+.campaign-card h3 em{color:var(--gold)}
+.campaign-card-content>a{display:inline-flex;align-items:center;justify-content:space-between;gap:44px;padding:0 0 12px;min-width:185px;border-bottom:1px solid #d4ad73;color:#f3e3d1;font-size:12px}
+.campaign-card-content>a span{font-size:20px}
+.campaign-share{position:absolute;right:25px;top:25px;z-index:3;border:1px solid #ffffffa0;background:#25101570;color:#fff;padding:11px 15px;font-size:11px;backdrop-filter:blur(4px)}
+.campaign-share:hover{background:#dfbd80;color:#251015}
+.campaign-share-status{font-size:11px;line-height:1.5;color:#735932}
+.campaign-share-status:not(:empty){margin-top:17px}
+.mobile-ad-cta{display:none}
+@media(max-width:1100px){.campaigns{padding-top:90px;padding-bottom:90px}.campaign-card,.campaign-card-wide{min-height:540px}.campaign-card h3{font-size:clamp(41px,5vw,60px)}}
+@media(max-width:760px){.hero-actions{display:flex;align-items:flex-start;gap:15px;flex-direction:column}.hero-location{font-size:11px;padding:9px 0}.campaigns{padding-top:76px;padding-bottom:76px}.campaigns-heading{display:block;margin-bottom:30px}.campaigns-heading h2{font-size:52px;letter-spacing:-2px}.campaigns-heading>p{margin-top:17px;font-size:12px}.campaign-grid{display:block}.campaign-card,.campaign-card-wide{min-height:0;height:570px;margin-bottom:15px}.campaign-card-wide{height:610px}.campaign-card-wide img{object-position:64% center}.campaign-card-wide:before{background:linear-gradient(0deg,#1e0e13e6,transparent 67%),linear-gradient(90deg,#210f1744,transparent 70%)}.campaign-card-content,.campaign-card-wide .campaign-card-content{left:25px;right:25px;bottom:35px}.campaign-card h3{font-size:clamp(43px,10vw,60px);margin:15px 0 25px}.campaign-share{right:15px;top:15px;font-size:10px}.mobile-ad-cta{display:flex;align-items:center;justify-content:space-between;position:fixed;z-index:20;bottom:0;left:0;right:0;background:#dfbd80;color:#251015;min-height:56px;padding:14px 25px;font-size:12px;box-shadow:0 -8px 25px #1a0c1130}.mobile-ad-cta span{font-size:21px}.footer{padding-bottom:80px}}
+@media(max-width:370px){.campaigns-heading h2{font-size:44px}.campaign-card h3{font-size:42px}.campaign-card-wide{height:570px}}
+@media(prefers-reduced-motion:reduce){.campaign-card img{transition:none}}

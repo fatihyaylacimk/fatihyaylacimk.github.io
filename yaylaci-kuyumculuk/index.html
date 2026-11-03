@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#210e14">
-  <meta name="description" content="Yaylacı Kuyumculuk. Her anınıza eşlik eden bir ışıltı. Malatya İnönü Kapalı Çarşısı'nda bizi ziyaret edin.">
+  <meta name="description" content="Yaylacı Kuyumculuk'un özel anlara eşlik eden görsel hikâyeleri. Işıltıyı Malatya İnönü Kapalı Çarşısı'nda yakından keşfedin.">
   <meta property="og:title" content="Yaylacı Kuyumculuk | Malatya İnönü Kapalı Çarşısı">
-  <meta property="og:description" content="Her anınıza eşlik eden bir ışıltı. Yüzük, bilezik, küpe ve kolye ilhamı.">
+  <meta property="og:description" content="Her anınıza eşlik eden bir ışıltı. Üç kısa hikâye ve Yaylacı Kuyumculuk'tan görsel ilham.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:image" content="https://fatihyaylacimk.github.io/yaylaci-kuyumculuk/assets/hero.webp">
@@ -17,6 +17,7 @@
   <link rel="preload" href="assets/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="share.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -26,9 +27,9 @@
       <span class="brand-type">YAYLACI<span>KUYUMCULUK</span></span>
     </a>
     <nav class="nav" id="navigation" aria-label="Ana menü">
-      <a href="#koleksiyon">Koleksiyon</a>
-      <a href="#secim-rehberi">Seçim rehberi</a>
-      <a href="#hikaye">Özel anlar</a>
+      <a href="#kampanyalar">Hikâyeler</a>
+      <a href="#koleksiyon">Görsel seçki</a>
+      <a href="#hikaye">Yaylacı</a>
       <a href="#magaza">Mağaza</a>
       <a class="nav-mobile-visit" href="#magaza">Bizi ziyaret edin ↗</a>
     </nav>
@@ -45,23 +46,45 @@
       </div>
       <div class="hero-shade"></div>
       <div class="hero-copy">
-        <p class="eyebrow hero-eyebrow"><span></span> MALATYA · KAPALI ÇARŞI</p>
+        <p class="eyebrow hero-eyebrow"><span></span> MALATYA · İNÖNÜ KAPALI ÇARŞISI</p>
         <h1 id="hero-title">Her anınıza<br> eşlik eden<br><em>bir ışıltı.</em></h1>
         <p class="hero-description">Bir anı, bir söz, bir başlangıç.<br>Her hikâyenin kendine özgü bir parıltısı var.</p>
-        <a class="button button-gold" href="#koleksiyon">Koleksiyonu keşfedin <span aria-hidden="true">↗</span></a>
+        <div class="hero-actions"><a class="button button-gold" href="#kampanyalar">Hikâyeleri keşfedin <span aria-hidden="true">↗</span></a><a class="hero-location" href="#magaza">Mağazayı görün <span aria-hidden="true">↓</span></a></div>
       </div>
       <div class="hero-bottom">
-        <a href="#koleksiyon" class="scroll-link"><span class="scroll-line" aria-hidden="true"></span> AŞAĞIYA KAYDIRIN</a>
+        <a href="#kampanyalar" class="scroll-link"><span class="scroll-line" aria-hidden="true"></span> AŞAĞIYA KAYDIRIN</a>
         <div class="hero-caption"><span>YAYLACI KUYUMCULUK</span><div class="hero-pagination" role="group" aria-label="Açılış görselleri"><button type="button" class="hero-dot is-active" data-slide="0" aria-label="İlk görsel" aria-current="true"></button><button type="button" class="hero-dot" data-slide="1" aria-label="İkinci görsel"></button><button type="button" class="hero-dot" data-slide="2" aria-label="Üçüncü görsel"></button></div><button id="motion-button" type="button" aria-pressed="false" aria-label="Görsel geçişlerini duraklat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
       </div>
     </section>
 
     <div class="intro-band" aria-label="Yaylacı Kuyumculuk tanıtımı"><span class="intro-star" aria-hidden="true">✧</span><p>Bir bakışta zarafet. <em>Yıllarca süren bir his.</em></p><span class="intro-star" aria-hidden="true">✧</span></div>
 
+    <section class="campaigns section-wrap" id="kampanyalar" aria-labelledby="campaigns-title">
+      <div class="campaigns-heading"><div><p class="eyebrow dark-eyebrow">YAYLACI · GÖRSEL HİKÂYELER</p><h2 id="campaigns-title">Bir an. Bir his.<br><em>Bir ışıltı.</em></h2></div><p>Hayatın farklı anlarına üç kısa bakış. Size yakın gelen hikâyeyi açın.</p></div>
+      <div class="campaign-grid">
+        <article class="campaign-card campaign-card-wide">
+          <img src="assets/hero-bands.webp" alt="Traverten üzerinde iki altın alyans" width="1672" height="941" loading="lazy">
+          <div class="campaign-card-content"><p>01 / BİRLİKTE</p><h3>Birlikte başlayan<br><em>her şey.</em></h3><a href="kampanya/birlikte/">Hikâyeyi aç <span aria-hidden="true">↗</span></a></div>
+          <button class="campaign-share" type="button" data-share-link="kampanya/birlikte/" data-share-title="Birlikte başlayan her şey · Yaylacı Kuyumculuk" aria-label="Birlikte hikâyesini paylaş">Paylaş ↗</button>
+        </article>
+        <article class="campaign-card">
+          <img src="assets/necklace.webp" alt="Bordo kadife üzerinde altın kolye" width="1024" height="1280" loading="lazy">
+          <div class="campaign-card-content"><p>02 / HEDİYE</p><h3>Kalpten gelen<br><em>bir ışıltı.</em></h3><a href="kampanya/hediye/">Hikâyeyi aç <span aria-hidden="true">↗</span></a></div>
+          <button class="campaign-share" type="button" data-share-link="kampanya/hediye/" data-share-title="Kalpten gelen bir ışıltı · Yaylacı Kuyumculuk" aria-label="Hediye hikâyesini paylaş">Paylaş ↗</button>
+        </article>
+        <article class="campaign-card">
+          <img src="assets/bracelet-alt.webp" alt="Bordo kadife üzerinde ince altın bileklik" width="1122" height="1402" loading="lazy">
+          <div class="campaign-card-content"><p>03 / KENDİNE</p><h3>Bugün biraz<br><em>senin için.</em></h3><a href="kampanya/kendine/">Hikâyeyi aç <span aria-hidden="true">↗</span></a></div>
+          <button class="campaign-share" type="button" data-share-link="kampanya/kendine/" data-share-title="Bugün biraz senin için · Yaylacı Kuyumculuk" aria-label="Kendine hikâyesini paylaş">Paylaş ↗</button>
+        </article>
+      </div>
+      <p class="campaign-share-status" role="status" aria-live="polite"></p>
+    </section>
+
     <section class="collection section-wrap" id="koleksiyon" aria-labelledby="collection-title">
       <div class="section-heading">
-        <div><p class="eyebrow dark-eyebrow">KOLEKSİYONDAN İLHAM</p><h2 id="collection-title">Sizin hikâyeniz,<br><em>sizin ışıltınız.</em></h2></div>
-        <p>Altı farklı detay, sayısız hikâye.<br>Size hitap eden parçayı keşfedin.</p>
+        <div><p class="eyebrow dark-eyebrow">GÖRSEL SEÇKİ</p><h2 id="collection-title">Sizin hikâyeniz,<br><em>sizin ışıltınız.</em></h2></div>
+        <p>Yüzükten bilekliğe, altı farklı ışıltı.<br>Görsellere yakından bakın.</p>
       </div>
       <div class="collection-grid">
         <a class="collection-item collection-item-ring" href="koleksiyon/yuzukler/" aria-label="Yüzükler sayfasını keşfet">
@@ -90,6 +113,19 @@
         </a>
       </div>
       <p class="collection-note">Görseller koleksiyon ilhamı içindir. Güncel ürünleri mağazamızda inceleyebilirsiniz.</p>
+    </section>
+
+    <section class="editorial" id="hikaye" aria-labelledby="editorial-title">
+      <div class="editorial-image"><img src="assets/earrings.webp" alt="Altın küpelerin taş ve kadife üzerinde yakın çekimi" width="1122" height="1402" loading="lazy"></div>
+      <div class="editorial-copy">
+        <div class="editorial-inner">
+          <p class="eyebrow">KÜÇÜK BİR DETAY, BÜYÜK BİR HİS</p>
+          <h2 id="editorial-title">Bazı anlar<br>geçer.<br><em>Işıltısı kalır.</em></h2>
+          <p>Bir kutlamada, bir teşekkürde ya da sadece kendiniz için. Seçtiğiniz parçanın anlamı, onu taşıdığınız anda başlar.</p>
+          <a class="text-link" href="#magaza">Malatya İnönü Kapalı Çarşısı'nda buluşalım <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="editorial-ornament" aria-hidden="true">Y</span>
+      </div>
     </section>
 
     <section class="guide" id="secim-rehberi" aria-labelledby="guide-title">
@@ -134,19 +170,6 @@
       </div>
     </section>
 
-    <section class="editorial" id="hikaye" aria-labelledby="editorial-title">
-      <div class="editorial-image"><img src="assets/earrings.webp" alt="Altın küpelerin taş ve kadife üzerinde yakın çekimi" width="1122" height="1402" loading="lazy"></div>
-      <div class="editorial-copy">
-        <div class="editorial-inner">
-          <p class="eyebrow">KÜÇÜK BİR DETAY, BÜYÜK BİR HİS</p>
-          <h2 id="editorial-title">Bazı anlar<br>geçer.<br><em>Işıltısı kalır.</em></h2>
-          <p>Bir kutlamada, bir teşekkürde ya da sadece kendiniz için. Seçtiğiniz parçanın anlamı, onu taşıdığınız anda başlar.</p>
-          <a class="text-link" href="#magaza">Malatya İnönü Kapalı Çarşısı'nda buluşalım <span aria-hidden="true">↗</span></a>
-        </div>
-        <span class="editorial-ornament" aria-hidden="true">Y</span>
-      </div>
-    </section>
-
     <section class="visit section-wrap" id="magaza" aria-labelledby="visit-title">
       <div class="visit-heading"><p class="eyebrow dark-eyebrow">SİZİ BEKLİYORUZ</p><h2 id="visit-title">Işıltıyı <em>yakından</em><br>keşfedin.</h2><p>Yaylacı Kuyumculuk'u Malatya İnönü Kapalı Çarşısı'nda ziyaret edin. Sizin için anlamlı olan detayı birlikte bulalım.</p><div class="visit-lines"><div><span>01</span><p>Konumu haritada açın.</p></div><div><span>02</span><p>İlginizi çeken parçaları yerinde inceleyin.</p></div><div><span>03</span><p>Ölçü ve detaylar için mağazada görüşelim.</p></div></div></div>
       <div class="address-card">
@@ -161,6 +184,8 @@
       </div>
     </section>
   </main>
+
+  <a class="mobile-ad-cta" href="#magaza">Malatya’da buluşalım <span aria-hidden="true">↗</span></a>
 
   <footer class="footer">
     <div class="footer-top"><a class="footer-tag" href="#main">YAYLACI KUYUMCULUK</a><p>MALATYA · İNÖNÜ KAPALI ÇARŞISI</p><a href="#main" class="back-top">Başa dön <span aria-hidden="true">↑</span></a></div>
