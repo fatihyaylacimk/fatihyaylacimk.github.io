@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f2ed"><meta name="description" content="Kokalanov Bridge Lab: gerçek hesaplama, hassas denge ve biraz akademik mizah. Etkileşimli 3D köprü deneyimi.">
+  <title>Kokalanov Bridge Lab — Geçiş İzni</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+<header class="masthead">
+  <a href="./" class="brand" aria-label="Kokalanov Bridge Lab"><svg viewBox="0 0 44 36" fill="none" aria-hidden="true"><path d="M3 28h38M5 28 13 9l9 19 9-19 8 19M13 9h18M5 28h34" stroke="currentColor" stroke-width="2.3"/><circle cx="13" cy="9" r="3" fill="currentColor"/><circle cx="31" cy="9" r="3" fill="currentColor"/></svg><span>KOKALANOV<small>BRIDGE LAB · EST. 2026</small></span></a>
+  <nav aria-label="Main"><span class="nav-active" data-i18n="lab">Deney alanı</span><button id="saved-nav" data-i18n="designs">Tasarımlar</button><button id="methods-nav" data-i18n="methods">Model notları</button></nav>
+  <div class="header-right"><span class="live-dot"></span><span class="desktop-only" data-i18n="live">Canlı hesaplama</span><select id="language" aria-label="Language"><option value="tr">TR</option><option value="en">EN</option><option value="mk">МК</option></select></div>
+</header>
+<main>
+  <section class="intro">
+    <div><p class="eyebrow"><span>01 /</span> <span data-i18n="eyebrow">DENGE, TOLERANS VE BİR İHTİMAL ONAY.</span></p><h1 data-i18n-html="hero">Hocam, buradan<br><em>geçebilir miyiz?</em></h1></div>
+    <div class="intro-note"><span class="edition">THE KOKALANOV EDITION</span><p data-i18n="intro">Bir köprü kur. Hesabını göster. Sonra bir de hocanın koşullarında dene.</p><div class="tiny-rule"></div><span class="micro" data-i18n="dedication">Vasko Kokalanov için, Fatih tarafından.</span></div>
+  </section>
+
+  <section class="laboratory" aria-label="Bridge laboratory">
+    <aside class="design-panel">
+      <div class="panel-title"><span class="eyebrow" data-i18n="designTitle">01 — TASARIM MASASI</span><button id="reset" class="text-button" data-i18n="reset">Sıfırla ↺</button></div>
+      <label class="field-label" data-i18n="geometry">Köprü geometrisi</label>
+      <div class="topology-options" role="group" aria-label="Bridge topology">
+        <button class="topology selected" data-topology="warren"><svg viewBox="0 0 80 30"><path d="M4 25 16 6 28 25 40 6 52 25 64 6 76 25H4M16 6h48"/></svg>Warren</button>
+        <button class="topology" data-topology="pratt"><svg viewBox="0 0 80 30"><path d="M4 25V6h72v19H4M22 6v19M40 6v19M58 6v19M4 25 22 6 40 25 58 6 76 25"/></svg>Pratt</button>
+        <button class="topology" data-topology="howe"><svg viewBox="0 0 80 30"><path d="M4 25V6h72v19H4M22 6v19M40 6v19M58 6v19M4 6 22 25 40 6 58 25 76 6"/></svg>Howe</button>
+      </div>
+      <div class="slider-field"><label for="span" data-i18n="span">Açıklık</label><output for="span" id="span-value">30 m</output><input type="range" id="span" min="12" max="50" step="1" value="30"></div>
+      <div class="slider-field"><label for="height" data-i18n="height">Yükseklik</label><output for="height" id="height-value">5 m</output><input type="range" id="height" min="2" max="10" step=".25" value="5"></div>
+      <div class="slider-field"><label for="diameter" data-i18n="diameter">Çubuk çapı</label><output for="diameter" id="diameter-value">85 mm</output><input type="range" id="diameter" min="50" max="200" step="5" value="85"></div>
+      <div class="slider-field"><label for="panels" data-i18n="panels">Panel sayısı</label><output for="panels" id="panels-value">8</output><input type="range" id="panels" min="4" max="12" step="1" value="8"></div>
+      <div class="material-row"><span class="material-swatch"></span><div><strong data-i18n="steel">İdeal elastik çelik</strong><small>E = 200 GPa · ρ = 7,850 kg/m³</small></div></div>
+      <div class="editor-section"><label class="field-label" data-i18n="editStructure">Yapıyı düzenle</label><div class="editor-tools" role="group" aria-label="Edit tools"><button class="tool active" data-tool="inspect" title="Inspect"><span>↗</span><small data-i18n="inspect">İncele</small></button><button class="tool" data-tool="remove" title="Remove or restore member"><span>−</span><small data-i18n="remove">Çubuk</small></button><button class="tool" data-tool="add" title="Add member"><span>＋</span><small data-i18n="add">Ekle</small></button><button class="tool" data-tool="support" title="Cycle support"><span>△</span><small data-i18n="support">Mesnet</small></button></div><p class="tool-hint" id="tool-hint"></p></div>
+      <button id="save-design" class="save-button"><span>＋</span> <span data-i18n="saveDesign">Tasarımı kaydet</span></button>
+    </aside>
+
+    <div class="experiment">
+      <div class="viewport" id="viewport">
+        <div class="scene-top"><div class="scene-label"><span class="live-dot"></span><span id="scene-status" data-i18n="stable">Denge çözüldü</span></div><span class="scene-coordinate">K / B — 001</span></div>
+        <canvas id="bridge-canvas" aria-label="Interactive 3D bridge. Drag to orbit, scroll to zoom. Use the form controls to edit the bridge."></canvas>
+        <div class="fallback" id="fallback" hidden><h3 data-i18n="webglTitle">3D görüntü başlatılamadı</h3><p data-i18n="webglHint">Hesaplama ve raporlar çalışmaya devam eder. 3D için WebGL destekleyen bir tarayıcı kullanın.</p><svg id="fallback-model" viewBox="0 0 800 300"></svg></div>
+        <div id="unstable-banner" class="unstable-banner" hidden><strong data-i18n="unstableTitle">Bu yapı dengesini kaybetti.</strong><span data-i18n="unstableHint">Bir diyagonal ekleyin veya kaldırdığınız çubuğu geri getirin.</span></div>
+        <div class="scene-cameras"><button data-camera="perspective" class="active" data-i18n="perspective">Perspektif</button><button data-camera="front" data-i18n="front">Ön</button><button data-camera="top" data-i18n="top">Üst</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="fullscreen" aria-label="Fullscreen">⛶</button></div>
+        <div class="scene-bottom"><span class="scene-hint" data-i18n="orbitHint">Sürükle: döndür · Kaydır: yaklaş</span><div class="scene-options"><button id="stress-view" class="active" data-i18n="stress">Kuvvet rengi</button><button id="screenshot" data-i18n="capture">Görüntü al ↗</button></div></div>
+        <div class="stress-legend"><i class="tension"></i><span data-i18n="tension">Çekme</span><i class="compression"></i><span data-i18n="compression">Basınç</span><span class="amplification" id="amplification">Deformasyon 80×</span></div>
+        <div class="member-tip" id="member-tip" hidden></div>
+      </div>
+      <div class="load-controls">
+        <div class="load-heading"><div><span class="eyebrow" data-i18n="loadCase">02 — YÜK SENARYOSU</span><strong><span data-i18n="vehicleLoad">Araç yükü</span> <output id="truck-value">180 kN</output></strong></div><div class="load-actions"><button id="vibration" class="secondary" data-i18n="vibration">≈ Titreşim deneyi</button><button id="run" class="primary"><span id="run-icon">▶</span> <span id="run-label" data-i18n="run">Geçişi başlat</span></button></div></div>
+        <input type="range" id="truck" min="0" max="600" step="10" value="180" aria-label="Vehicle load"><div class="range-caption"><span>0 kN</span><span>600 kN</span></div>
+        <div class="load-secondary"><div><label for="position" data-i18n="vehiclePosition">Araç konumu</label><input id="position" type="range" min="0" max="100" step=".1" value="50"><output id="position-value">50%</output></div><div><label for="horizontal" data-i18n="horizontal">Yatay yük</label><input id="horizontal" type="range" min="0" max="100" step="5" value="0"><output id="horizontal-value">0 kN</output></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result-section">
+    <div class="measurements"><div class="measurement"><span data-i18n="displacement">En büyük düşey sapma</span><strong id="metric-displacement">—<small>mm</small></strong><div class="metric-bar"><i id="deflection-bar"></i></div><small id="displacement-limit"></small></div><div class="measurement"><span data-i18n="utilization">En yüksek kullanım</span><strong id="metric-utilization">—<small>%</small></strong><div class="metric-bar"><i id="utilization-bar"></i></div><small id="critical-kind"></small></div><div class="measurement"><span data-i18n="frequency">İlk doğal frekans</span><strong id="metric-frequency">—<small>Hz</small></strong><div class="wave-mark">∿∿∿∿∿∿∿</div><small data-i18n="frequencyHint">Kütle + rijitlik modelinden</small></div><div class="measurement"><span data-i18n="mass">Toplam köprü kütlesi</span><strong id="metric-mass">—<small>t</small></strong><div class="mass-mark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small data-i18n="massHint">İki kafes + döşeme; araç hariç</small></div></div>
+    <div class="lower-grid"><section class="response-panel"><div class="section-heading"><span class="eyebrow" data-i18n="response">03 — KÖPRÜNÜN CEVABI</span><span class="micro" id="response-note" data-i18n="responseNote">Orta nokta · mm · son 12 saniye</span></div><svg id="response-chart" viewBox="0 0 760 155" preserveAspectRatio="none" role="img" aria-label="Bridge displacement history"><defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#58715e" stop-opacity=".2"/><stop offset="1" stop-color="#58715e" stop-opacity="0"/></linearGradient></defs><g id="chart-grid"></g><path id="chart-area" fill="url(#chart-fill)"/><path id="chart-path" fill="none" stroke="#486553" stroke-width="2"/><text id="chart-max" x="8" y="16"></text><text id="chart-min" x="8" y="149"></text></svg><div class="chart-footer"><span class="micro" data-i18n="chartHint">Statik hareketli yük / ilk mod serbest titreşimi</span><button id="export-data" class="text-button" data-i18n="exportData">Veriyi indir ↓</button></div></section>
+    <section class="inspection-panel" id="inspection-panel"><div class="inspection-top"><span class="eyebrow" data-i18n="inspectionTitle">04 — SON BİR KONTROL</span><span class="stamp" id="inspection-stamp">K / K</span></div><h2 data-i18n="inspectionHeading">Bir de hocaya soralım.</h2><p class="inspection-copy" id="inspection-copy" data-i18n="inspectionIntro">Fizik kuralları ikna olmuş olabilir. Bir de daha sıkı koşullarda bakalım.</p><button id="professor-test" class="inspection-button"><span data-i18n="professorTest">Kokalanov Denetimi</span><span>↗</span></button><p class="micro inspection-conditions" data-i18n="inspectionConditions">1.5× hareketli yük · L/800 sapma · 2× dayanım payı</p></section></div>
+  </section>
+  <footer><div class="footer-dedication"><svg viewBox="0 0 40 20" aria-hidden="true"><path d="M2 18 10 2l10 16L30 2l8 16H2M10 2h20" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-i18n="footerQuote">“Bu kez bir şeyin sizden geçebilmesi için mühendislik yaptık.”</span></div><div><span data-i18n="credits">Tasarım ve geliştirme: Fatih</span><button id="footer-methods" data-i18n="modelLink">Model ve varsayımlar ↗</button></div></footer>
+</main>
+<dialog id="dialog"><div class="dialog-header"><h2 id="dialog-title"></h2><button id="close-dialog" aria-label="Close">×</button></div><div id="dialog-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="./app.mjs"></script>
+</body></html>
