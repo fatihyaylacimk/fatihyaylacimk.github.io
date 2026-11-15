@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5efe6">
-  <meta name="gallery-build" content="studio-360">
+  <meta name="theme-color" content="#131515">
+  <meta name="gallery-build" content="studio-360-v2">
   <meta name="description" content="Kadın ve erkek parfümlerini 360° cam vitrinde keşfet, koku notalarını Türkçe veya İngilizce incele.">
   <title>Parfüm Galerisi</title>
   <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABzElEQVR4nO2by1EDMRBE29xcRREHwZASJ1IiGLKBExcKy6OZ/lCF+mhL8ry36/VKK18er0+f+Md5SBeQzhGQLiCdIyBdQDpHQLqAdI6AdAEf76/Rz48K+IZPSogJ+AmdkhARcAs2IcEu4B6kW4JVwG9wzy9vpXaq2ASs4JMSLAIqRz4lQS6getrfel0tQSpgB371vlKCTEAHftVOJUEiYAK/aq+QQBfAgF/1Y0ugCmDCr/ozJdAEdOErMEoJFAFT+KSEsQDWkU9JGAlgn/YJCW0Bqu+8W0JLgPKCV23HkrAtQA2/054hYUuAC36n31RCWYAbfqf/REJJQAp+Z5yuhJKA7uDT2+CdcboHqfwVSElQwgObF0G3BDU80PgZdElwwAPNGyG1BBc8MLgVVklwwgPDyRBbghseIEyHWRIS8ABpQWQqIQUPABfmTlFVkapxAfKiqGLFRgkPCJbFmRLU8IDowQhDggMeED4am0hwwQPih6MdCU54wPB4fEeCGx4wbZCoSEjAA8YtMisJKXiAfCNUiXMlqRL7NjnGbJCZyEbJyWyQndhW2c5sUJHoZumd2aAq9ovgX0v8/wLpHAHpAtI5AtIFpHMEpAtI5wt3ATcvGYJHzQAAAABJRU5ErkJggg==">
@@ -84,449 +84,8 @@
   src: url("data:font/woff2;base64,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") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-:root {
-  --ink: #1f211f;
-  --paper: #f5efe6;
-  --clay: #ab7046;
-  --line: #ded2c2;
-  --gutter: clamp(18px, 4.4vw, 76px);
-  --serif: 'Instrument Serif', Georgia, serif;
-  --sans: 'DM Sans', Arial, sans-serif;
-  --spin-period: 5.6s;
-}
-* { box-sizing: border-box; }
-html { min-width: 280px; }
-body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; }
-a, button { -webkit-tap-highlight-color: transparent; }
-p, h1, dl, dd, figure { margin: 0; }
-:focus-visible { outline: 2px solid #bb845d; outline-offset: 4px; }
-h1:focus { outline: none; }
-
-.page {
-  display: none;
-  min-height: 100vh;
-  min-height: 100svh;
-}
-html:not(.enhanced) .page:target,
-html:not(.enhanced) .default-page,
-html.enhanced .page[data-active] { display: block; }
-html:not(.enhanced) .page:target ~ .default-page { display: none; }
-.page[data-product] { color-scheme: dark; color: #fff4eb; background: radial-gradient(ellipse at 23% 22%,#253042 0,#101621 50%,#0e131c 100%); }
-
-.site-header, .theater-header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 18px;
-  align-items: center;
-  padding: 15px var(--gutter);
-  border-bottom: 1px solid var(--line);
-}
-.site-header { background: #fff9f1; }
-.wordmark {
-  justify-self: start;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  min-height: 38px;
-  color: #2a241f;
-  font-size: clamp(.72rem, 1.2vw, .93rem);
-  font-weight: 700;
-  letter-spacing: .17em;
-  text-transform: uppercase;
-}
-.wordmark-mark {
-  position: relative;
-  flex: none;
-  width: 11px;
-  height: 11px;
-  border: 1px solid #ad7045;
-  transform: rotate(45deg);
-}
-.wordmark-mark::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background: #ab7046;
-}
-.catalogue-nav, .language, .pager { display: flex; align-items: center; }
-.catalogue-nav {
-  gap: 3px;
-  padding: 3px;
-  border: 1px solid #dbcebc;
-  border-radius: 5px;
-  background: #f3ece2;
-}
-.catalogue-nav a {
-  display: inline-grid;
-  min-height: 37px;
-  min-width: 95px;
-  padding-inline: 12px;
-  place-items: center;
-  font-size: .83rem;
-  font-weight: 650;
-  color: #4b443d;
-  border-radius: 3px;
-  transition: background-color .17s, color .17s;
-}
-.catalogue-nav a[aria-current] { color: #fff4df; background: #222932; }
-.language { justify-self: end; gap: 2px; white-space: nowrap; }
-.language a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 4px 9px;
-  color: #62574c;
-  font-size: .78rem;
-  font-weight: 650;
-}
-.language a[aria-current] { color: #583d29; text-decoration: underline; text-underline-offset: .33em; }
-
-.gallery {
-  width: min(100%, 1600px);
-  margin-inline: auto;
-  padding: clamp(31px, 5.5vh, 63px) var(--gutter) 58px;
-  background: radial-gradient(ellipse at 86% 10%, #fff4e0 0, transparent 44%);
-}
-.collection-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px 22px;
-  margin-bottom: clamp(22px, 4vw, 43px);
-}
-.collection-heading h1 { font: 400 clamp(3.4rem, 6.3vw, 6.2rem) / .95 var(--serif); letter-spacing: -.023em; }
-.collection-heading h1 em { color: #9a5738; font-weight: 400; }
-.gallery-instruction { padding-bottom: .4em; color: #544940; font-size: clamp(.80rem, 1.2vw, .96rem); }
-.showcase {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(16px, 2.3vw, 35px);
-}
-.fragrance { display: grid; align-content: start; min-width: 0; }
-.card-window {
-  position: relative;
-  display: block;
-  isolation: isolate;
-  overflow: hidden;
-  aspect-ratio: .92;
-  border-radius: 11px 11px 5px 5px;
-  border: 1px solid #202934;
-  background:
-    radial-gradient(ellipse 62% 88% at 48% 98%,rgb(var(--light) / .39) 0,transparent 65%),
-    radial-gradient(ellipse 82% 87% at 51% 30%,rgb(var(--light) / .25) 0,transparent 66%),
-    linear-gradient(140deg,#272934,#0a121c 82%);
-  box-shadow: 0 8px 19px #4c35241c;
-}
-.card-window::before {
-  content: '';
-  position: absolute;
-  inset: auto 11% 8%;
-  height: 14%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse,#120f0d,transparent 68%);
-  border-top: 1px solid rgb(var(--light) / .46);
-}
-.card-window::after {
-  content: '';
-  position: absolute;
-  inset: 8% 9% 18%;
-  z-index: -1;
-  border: 1px solid rgb(var(--light) / .16);
-  border-radius: 3px;
-  background: linear-gradient(150deg, rgb(var(--light) / .10), transparent 63%);
-  pointer-events: none;
-}
-.card-bottle {
-  position: absolute;
-  bottom: 15%;
-  inset-inline: 13%;
-  height: calc(72% * var(--bottle-scale, 1));
-  background: var(--photo) center bottom / contain no-repeat;
-  filter: drop-shadow(0 10px 12px #020303bc);
-  transition: transform .4s cubic-bezier(.22,.73,.2,1);
-}
-.fragrance-caption {
-  position: relative;
-  display: grid;
-  gap: 5px;
-  padding: 11px 19px 13px 0;
-  border-bottom: 1px solid var(--line);
-}
-.fragrance-brand { color: #6e5946; font-size: .63rem; font-weight: 700; letter-spacing: .14em; }
-.fragrance-name { font: 400 clamp(1.24rem, 2.16vw, 1.86rem) / 1.01 var(--serif); text-wrap: balance; }
-.fragrance-arrow {
-  position: absolute;
-  right: 3px;
-  top: 24px;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid #805332;
-  border-right: 1px solid #805332;
-  transform: rotate(45deg);
-}
-@media (hover: hover) {
-  .fragrance:hover .card-bottle { transform: translateY(-5px) scale(1.04); }
-  .fragrance:hover .card-window { border-color: #9f6b45; }
-}
-
-.theater-header {
-  border-color: #c3d9ed26;
-  background: #0b121cc2;
-}
-.theater-header .language a { color: #d1d5d7; }
-.theater-header .language a[aria-current] { color: #f5cba7; }
-.theater-header .back {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #f7e2cf;
-  white-space: nowrap;
-  font-size: .86rem;
-  font-weight: 650;
-  min-height: 43px;
-}
-.back span { color: #f2b883; font-size: 1.05rem; }
-.theater-header .pager {
-  gap: 8px;
-  white-space: nowrap;
-  font-size: .75rem;
-  color: #b8c1c9;
-  font-variant-numeric: tabular-nums;
-}
-.pager a {
-  display: inline-grid;
-  place-items: center;
-  width: 39px;
-  height: 39px;
-  border: 1px solid #c3d9ed36;
-  border-radius: 50%;
-  background: #1a2432;
-  color: #fff2e4;
-  font-size: 1.26rem;
-}
-.pager a:hover { border-color: #ebbb974f; }
-.theater {
-  display: grid;
-  grid-template-columns: minmax(0, 1.26fr) minmax(0, .81fr);
-  align-items: center;
-  width: min(100%, 1540px);
-  gap: clamp(32px, 5.9vw, 102px);
-  margin-inline: auto;
-  padding: clamp(20px,4.1vh,48px) var(--gutter) 50px;
-}
-.product-stage { min-width: 0; }
-.display-case {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  height: clamp(420px, 70svh, 675px);
-  background:
-    radial-gradient(ellipse at 43% 30%,rgb(var(--light) / .29),transparent 68%),
-    linear-gradient(145deg,#304356,#172333 41%,#111b2a);
-  border: 1px solid rgb(var(--light) / .48);
-  border-radius: 9px;
-  box-shadow: 0 18px 48px #070c14a1, inset 0 0 40px #161b2890;
-}
-.case-rear, .case-panel, .case-border, .case-light, .case-pedestal, .case-shadow, .orbit-light { position: absolute; pointer-events: none; }
-.case-rear {
-  inset: 12% 12% 15% 9%;
-  background:
-    radial-gradient(ellipse at 49% 56%,rgb(var(--light) / .30),transparent 78%),
-    linear-gradient(125deg,#202e3f,#121d2a);
-  border: 1px solid rgb(var(--light) / .55);
-  box-shadow: inset 0 0 55px #0a121b5c;
-}
-.case-panel { inset: 0; }
-.case-top {
-  clip-path: polygon(0 0,100% 0,88% 12%,9% 12%);
-  background: linear-gradient(172deg,#cfdfed36,rgb(var(--light) / .20),transparent);
-}
-.case-left {
-  clip-path: polygon(0 0,9% 12%,9% 85%,0 100%);
-  background: linear-gradient(90deg,#795a5230,#c2dbef10 9%,transparent 11%);
-}
-.case-right {
-  clip-path: polygon(100% 0,88% 12%,88% 85%,100% 100%);
-  background: linear-gradient(270deg,#a4bdd338,rgb(var(--light) / .16) 8%,transparent 14%);
-}
-.case-floor {
-  clip-path: polygon(0 100%,100% 100%,88% 85%,9% 85%);
-  background: radial-gradient(ellipse 52% 30% at 49% 95%,rgb(var(--light) / .28),transparent), #0d1827;
-}
-.case-border { inset: 0; z-index: 3; border-top: 1px solid #f3eced58; box-shadow: inset 0 -1px #e4efed40; }
-.case-border::before, .case-border::after { content: ''; position: absolute; inset: 0; background: rgb(var(--light) / .44); }
-.case-border::before { clip-path: polygon(0 0,9.15% 12%,87.85% 12%,100% 0,99.80% 0,87.78% 11.8%,9.2% 11.8%,.22% 0); }
-.case-border::after { clip-path: polygon(0 100%,9.15% 85%,87.85% 85%,100% 100%,99.78% 100%,87.78% 85.2%,9.2% 85.2%,.22% 100%); }
-.case-light {
-  inset: 5% 18% auto 17%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,#fff5dfde,rgb(var(--light)),transparent);
-  box-shadow: 0 0 23px rgb(var(--light) / .60);
-}
-.case-pedestal {
-  z-index: 1;
-  inset: auto 18% 8%;
-  height: 22%;
-  border-radius: 50%;
-  transform: scaleY(.49);
-  background: radial-gradient(ellipse at 48% 42%, rgb(var(--light) / .21), #2d3e51 57%, #101a28 72%);
-  border: 1px solid rgb(var(--light) / .47);
-  box-shadow: 0 14px #111824,0 17px 12px #090c13d9,inset 0 0 20px #08111e94;
-}
-.case-shadow {
-  z-index: 1;
-  inset: auto 30% 15%;
-  height: 8%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse,#060a12e0 0,transparent 70%);
-}
-.orbit-light {
-  z-index: 1;
-  inset: auto 22% 11%;
-  height: 17%;
-  border-radius: 50%;
-  transform: scaleY(.49);
-  border: 1px solid rgb(var(--light) / .33);
-}
-.render-surface {
-  position: absolute;
-  z-index: 2;
-  inset: 3% 0 12%;
-  display: grid;
-  place-items: center;
-  touch-action: pan-y;
-}
-html.enhanced .render-surface { cursor: grab; }
-html.enhanced .render-surface:active { cursor: grabbing; }
-.float-object {
-  position: relative;
-  height: 100%;
-  max-width: 84%;
-  aspect-ratio: 304 / 336;
-  animation: suspension 3.1s ease-in-out infinite;
-  will-change: transform;
-}
-@keyframes suspension {
-  0%,100% { transform: translateY(2px); }
-  50% { transform: translateY(-9px); }
-}
-.film-window { position: absolute; inset: 0; overflow: hidden; }
-.still-bottle { position: absolute; inset: 10% 10% 14%; background: var(--photo) center / contain no-repeat; filter: drop-shadow(0 12px 15px #090d14); }
-html:not(.enhanced) .still-bottle,
-.render-surface[data-ready] .still-bottle { display: none; }
-.turntable-frame {
-  position: absolute;
-  inset: 0;
-  background: var(--film) 0 0 / 1000% 800% no-repeat;
-  pointer-events: none;
-  animation: turntable var(--spin-period) steps(1,end) infinite;
-}
-html.enhanced .render-surface:not([data-ready]) .turntable-frame {
-  background-image: none;
-  animation-play-state: paused;
-}
-.product-stage[data-paused] .turntable-frame,
-.product-stage[data-paused] .float-object { animation-play-state: paused; }
-
-.stage-controls {
-  display: none;
-  min-height: 47px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 9px;
-  padding-top: 10px;
-  color: #cad1d9;
-  font-size: .77rem;
-}
-html.enhanced .stage-controls { display: flex; }
-.orbit-toggle {
-  min-height: 39px;
-  min-width: 83px;
-  padding: 6px 13px;
-  border: 1px solid #d9a9818a;
-  color: #ffe4ca;
-  border-radius: 4px;
-  background: #293341;
-  white-space: nowrap;
-  font-size: .78rem;
-  font-weight: 650;
-  cursor: pointer;
-}
-.orbit-toggle:hover { background: #3a4655; }
-.orbit-toggle:disabled { opacity: .6; cursor: default; }
-.stage-load { position: absolute; z-index: 3; inset: auto 12px 14px; text-align: center; color: #e2d6cd; font-size: .75rem; pointer-events: none; }
-html:not(.enhanced) .stage-load,
-.render-surface[data-ready] ~ .stage-load { display: none; }
-
-.product-info {
-  border-top: 1px solid rgb(var(--light) / .44);
-  padding-top: 21px;
-  min-width: 0;
-}
-.eyebrow { color: rgb(var(--light)); font-size: .73rem; font-weight: 700; letter-spacing: .19em; }
-.product-info h1 { margin-top: .14em; font: 400 clamp(3rem, 6.15vw, 6.65rem) / .92 var(--serif); text-wrap: balance; overflow-wrap: anywhere; }
-.concentration { margin-top: 11px; color: #e9bd9c; font-size: .77rem; letter-spacing: .15em; text-transform: uppercase; }
-.product-description { max-width: 49ch; margin-top: clamp(14px, 2.8vw, 26px); color: #d8d8d8; font-size: clamp(.90rem, 1.2vw, 1.06rem); line-height: 1.63; }
-.note-list { margin-top: 20px; border-top: 1px solid #d4dfeb2b; }
-.note-list > div { display: grid; grid-template-columns: minmax(87px,.72fr) minmax(0,1.5fr); gap: 11px; padding-block: 10px; align-items: baseline; border-bottom: 1px solid #d4dfeb2b; }
-.note-list dt { color: #f3c6a1; font-size: .64rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-.note-list dd { color: #f4ebed; font-size: .90rem; line-height: 1.45; }
-
-@media (max-width: 1040px) {
-  .showcase { grid-template-columns: repeat(4,minmax(0,1fr)); }
-  .theater { gap: 28px; }
-  .display-case { height: clamp(382px, 59svh, 575px); }
-}
-@media (max-width: 790px) {
-  .showcase { grid-template-columns: repeat(3,minmax(0,1fr)); }
-  .wordmark { letter-spacing: .105em; }
-}
-@media (max-width: 690px) {
-  .site-header, .theater-header {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "left lang" "center center";
-    gap: 3px 9px;
-    padding-block: 7px 9px;
-  }
-  .site-header .wordmark, .theater-header .back { grid-area: left; }
-  .site-header .catalogue-nav, .theater-header .pager { grid-area: center; justify-self: center; }
-  .language { grid-area: lang; }
-  .language a { padding-inline: 6px; }
-  .catalogue-nav a { min-height: 34px; min-width: 87px; }
-  .theater-header .pager a { width: 35px; height: 35px; }
-  .theater-header .back { min-height: 42px; font-size: .80rem; }
-  .collection-heading { margin-bottom: 19px; gap: 6px; }
-  .collection-heading h1 { font-size: clamp(2.97rem,10.2vw,4.6rem); }
-  .gallery-instruction { width: 100%; }
-  .theater { grid-template-columns: minmax(0,1fr); gap: 13px; padding-top: 12px; }
-  .display-case { height: clamp(280px, 45svh, 440px); }
-  .stage-controls { padding-top: 7px; }
-  .product-info { padding-top: 14px; }
-  .product-info h1 { font-size: clamp(3.05rem,11vw,4.6rem); }
-  .product-description { margin-top: 11px; }
-  .note-list { margin-top: 13px; }
-}
-@media (max-width: 520px) {
-  .showcase { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 12px; }
-  .fragrance-brand { font-size: .56rem; letter-spacing: .08em; }
-  .fragrance-name { font-size: clamp(1.17rem,5.15vw,1.6rem); }
-}
-@media (max-width: 340px) {
-  :root { --gutter: 12px; }
-  .stage-controls { font-size: .67rem; }
-  .orbit-toggle { min-width: 71px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .card-bottle, .catalogue-nav a { transition: none; }
-  .float-object { animation: none; }
-}
-.product-stage[data-grab] .float-object { animation-play-state: paused; }
-
-@keyframes turntable{0%{background-position:0% 0%}1.25%{background-position:11.11111111111111% 0%}2.5%{background-position:22.22222222222222% 0%}3.75%{background-position:33.333333333333336% 0%}5%{background-position:44.44444444444444% 0%}6.25%{background-position:55.55555555555556% 0%}7.5%{background-position:66.66666666666667% 0%}8.75%{background-position:77.77777777777777% 0%}10%{background-position:88.88888888888889% 0%}11.25%{background-position:100% 0%}12.5%{background-position:0% 14.285714285714286%}13.75%{background-position:11.11111111111111% 14.285714285714286%}15%{background-position:22.22222222222222% 14.285714285714286%}16.25%{background-position:33.333333333333336% 14.285714285714286%}17.5%{background-position:44.44444444444444% 14.285714285714286%}18.75%{background-position:55.55555555555556% 14.285714285714286%}20%{background-position:66.66666666666667% 14.285714285714286%}21.25%{background-position:77.77777777777777% 14.285714285714286%}22.5%{background-position:88.88888888888889% 14.285714285714286%}23.75%{background-position:100% 14.285714285714286%}25%{background-position:0% 28.571428571428573%}26.25%{background-position:11.11111111111111% 28.571428571428573%}27.5%{background-position:22.22222222222222% 28.571428571428573%}28.75%{background-position:33.333333333333336% 28.571428571428573%}30%{background-position:44.44444444444444% 28.571428571428573%}31.25%{background-position:55.55555555555556% 28.571428571428573%}32.5%{background-position:66.66666666666667% 28.571428571428573%}33.75%{background-position:77.77777777777777% 28.571428571428573%}35%{background-position:88.88888888888889% 28.571428571428573%}36.25%{background-position:100% 28.571428571428573%}37.5%{background-position:0% 42.857142857142854%}38.75%{background-position:11.11111111111111% 42.857142857142854%}40%{background-position:22.22222222222222% 42.857142857142854%}41.25%{background-position:33.333333333333336% 42.857142857142854%}42.5%{background-position:44.44444444444444% 42.857142857142854%}43.75%{background-position:55.55555555555556% 42.857142857142854%}45%{background-position:66.66666666666667% 42.857142857142854%}46.25%{background-position:77.77777777777777% 42.857142857142854%}47.5%{background-position:88.88888888888889% 42.857142857142854%}48.75%{background-position:100% 42.857142857142854%}50%{background-position:0% 57.142857142857146%}51.25%{background-position:11.11111111111111% 57.142857142857146%}52.5%{background-position:22.22222222222222% 57.142857142857146%}53.75%{background-position:33.333333333333336% 57.142857142857146%}55%{background-position:44.44444444444444% 57.142857142857146%}56.25%{background-position:55.55555555555556% 57.142857142857146%}57.5%{background-position:66.66666666666667% 57.142857142857146%}58.75%{background-position:77.77777777777777% 57.142857142857146%}60%{background-position:88.88888888888889% 57.142857142857146%}61.25%{background-position:100% 57.142857142857146%}62.5%{background-position:0% 71.42857142857143%}63.75%{background-position:11.11111111111111% 71.42857142857143%}65%{background-position:22.22222222222222% 71.42857142857143%}66.25%{background-position:33.333333333333336% 71.42857142857143%}67.5%{background-position:44.44444444444444% 71.42857142857143%}68.75%{background-position:55.55555555555556% 71.42857142857143%}70%{background-position:66.66666666666667% 71.42857142857143%}71.25%{background-position:77.77777777777777% 71.42857142857143%}72.5%{background-position:88.88888888888889% 71.42857142857143%}73.75%{background-position:100% 71.42857142857143%}75%{background-position:0% 85.71428571428571%}76.25%{background-position:11.11111111111111% 85.71428571428571%}77.5%{background-position:22.22222222222222% 85.71428571428571%}78.75%{background-position:33.333333333333336% 85.71428571428571%}80%{background-position:44.44444444444444% 85.71428571428571%}81.25%{background-position:55.55555555555556% 85.71428571428571%}82.5%{background-position:66.66666666666667% 85.71428571428571%}83.75%{background-position:77.77777777777777% 85.71428571428571%}85%{background-position:88.88888888888889% 85.71428571428571%}86.25%{background-position:100% 85.71428571428571%}87.5%{background-position:0% 100%}88.75%{background-position:11.11111111111111% 100%}90%{background-position:22.22222222222222% 100%}91.25%{background-position:33.333333333333336% 100%}92.5%{background-position:44.44444444444444% 100%}93.75%{background-position:55.55555555555556% 100%}95%{background-position:66.66666666666667% 100%}96.25%{background-position:77.77777777777777% 100%}97.5%{background-position:88.88888888888889% 100%}98.75%{background-position:100% 100%}100%{background-position:0 0}}</style>
+  </style>
+  <link rel="stylesheet" href="./360/gallery.css">
 </head>
 <body>
   <main id="site">
@@ -547,26 +106,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Dior J’adore parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Dior J’adore parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/jadore.webp" style="--film:url('./360/turntables/jadore.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/jadore.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -600,26 +155,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Chanel Chance Eau Tendre parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Chanel Chance Eau Tendre parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/chance.webp" style="--film:url('./360/turntables/chance.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/chance.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -653,26 +204,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Yves Saint Laurent Libre parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Yves Saint Laurent Libre parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/libre.webp" style="--film:url('./360/turntables/libre.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/libre.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -706,26 +253,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Prada Paradoxe parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Prada Paradoxe parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/paradoxe.webp" style="--film:url('./360/turntables/paradoxe.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/paradoxe.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -759,26 +302,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Carolina Herrera Good Girl parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Carolina Herrera Good Girl parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/good-girl.webp" style="--film:url('./360/turntables/good-girl.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/good-girl.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -812,26 +351,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Lancôme La Vie Est Belle parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Lancôme La Vie Est Belle parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/lancome.webp" style="--film:url('./360/turntables/lancome.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/lancome.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -865,26 +400,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Burberry Her parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Burberry Her parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/her.webp" style="--film:url('./360/turntables/her.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/her.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -918,26 +449,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Gucci Bloom parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Gucci Bloom parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/gucci-bloom.webp" style="--film:url('./360/turntables/gucci-bloom.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/gucci-bloom.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -971,26 +498,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Marc Jacobs Daisy parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Marc Jacobs Daisy parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/daisy.webp" style="--film:url('./360/turntables/daisy.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/daisy.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1024,26 +547,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Versace Bright Crystal parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Versace Bright Crystal parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/bright-crystal.webp" style="--film:url('./360/turntables/bright-crystal.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/bright-crystal.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1072,8 +591,14 @@ html:not(.enhanced) .stage-load,
     </nav>
   </header><div class="gallery">
     <div class="collection-heading">
-      <h1 tabindex="-1">Erkek <em>parfümleri</em></h1>
-      <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+      <div class="collection-copy">
+        <h1 tabindex="-1">Erkek <em>parfümleri</em></h1>
+        <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+      </div>
+      <a class="collection-feature" data-nav href="#tr-men-sauvage" style="--feature-photo:var(--shot-sauvage)">
+        <span class="feature-bottle" aria-hidden="true"></span>
+        <span class="feature-name">Sauvage<span aria-hidden="true"></span></span>
+      </a>
     </div>
     <div class="showcase">
       <a class="fragrance" data-nav data-card="terre" style="--light:220 146 92;--bottle-scale:0.98;--photo:var(--shot-terre)" href="#tr-men-terre">
@@ -1167,26 +692,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Hermès Terre d’Hermès parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Hermès Terre d’Hermès parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/terre.webp" style="--film:url('./360/turntables/terre.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/terre.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1220,26 +741,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Dior Sauvage parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Dior Sauvage parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/sauvage.webp" style="--film:url('./360/turntables/sauvage.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/sauvage.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1273,26 +790,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Versace Eros parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Versace Eros parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/eros.webp" style="--film:url('./360/turntables/eros.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/eros.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1326,26 +839,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Jean Paul Gaultier Le Male Le Parfum parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Jean Paul Gaultier Le Male Le Parfum parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/le-male.webp" style="--film:url('./360/turntables/le-male.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/le-male.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1379,26 +888,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Chanel Bleu de Chanel parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Chanel Bleu de Chanel parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/bleu.webp" style="--film:url('./360/turntables/bleu.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/bleu.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1432,26 +937,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Giorgio Armani Acqua di Giò Profondo parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Giorgio Armani Acqua di Giò Profondo parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/profondo.webp" style="--film:url('./360/turntables/profondo.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/profondo.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1485,26 +986,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Yves Saint Laurent Y parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Yves Saint Laurent Y parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/ysl-y.webp" style="--film:url('./360/turntables/ysl-y.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/ysl-y.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1538,26 +1035,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Valentino Uomo Born in Roma Intense parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Valentino Uomo Born in Roma Intense parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/born-in-roma.webp" style="--film:url('./360/turntables/born-in-roma.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/born-in-roma.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1591,26 +1084,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Emporio Armani Stronger With You Intensely parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Emporio Armani Stronger With You Intensely parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/stronger.webp" style="--film:url('./360/turntables/stronger.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/stronger.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1644,26 +1133,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Rabanne 1 Million parfüm şişesinin 360° görünümü" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Rabanne 1 Million parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/one-million.webp" style="--film:url('./360/turntables/one-million.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/one-million.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
+      <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° görünüm · Çevirmek için sürükle</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
     </figcaption>
   </figure>
@@ -1692,8 +1177,14 @@ html:not(.enhanced) .stage-load,
     </nav>
   </header><div class="gallery">
     <div class="collection-heading">
-      <h1 tabindex="-1">Women’s <em>fragrances</em></h1>
-      <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+      <div class="collection-copy">
+        <h1 tabindex="-1">Women’s <em>fragrances</em></h1>
+        <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+      </div>
+      <a class="collection-feature" data-nav href="#en-women-jadore" style="--feature-photo:var(--shot-jadore)">
+        <span class="feature-bottle" aria-hidden="true"></span>
+        <span class="feature-name">J’adore<span aria-hidden="true"></span></span>
+      </a>
     </div>
     <div class="showcase">
       <a class="fragrance" data-nav data-card="jadore" style="--light:224 169 103;--bottle-scale:0.98;--photo:var(--shot-jadore)" href="#en-women-jadore">
@@ -1787,26 +1278,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Dior J’adore 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Dior J’adore 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/jadore.webp" style="--film:url('./360/turntables/jadore.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/jadore.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -1840,26 +1327,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Chanel Chance Eau Tendre 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Chanel Chance Eau Tendre 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/chance.webp" style="--film:url('./360/turntables/chance.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/chance.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -1893,26 +1376,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Yves Saint Laurent Libre 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Yves Saint Laurent Libre 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/libre.webp" style="--film:url('./360/turntables/libre.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/libre.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -1946,26 +1425,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Prada Paradoxe 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Prada Paradoxe 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/paradoxe.webp" style="--film:url('./360/turntables/paradoxe.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/paradoxe.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -1999,26 +1474,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Carolina Herrera Good Girl 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Carolina Herrera Good Girl 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/good-girl.webp" style="--film:url('./360/turntables/good-girl.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/good-girl.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2052,26 +1523,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Lancôme La Vie Est Belle 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Lancôme La Vie Est Belle 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/lancome.webp" style="--film:url('./360/turntables/lancome.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/lancome.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2105,26 +1572,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Burberry Her 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Burberry Her 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/her.webp" style="--film:url('./360/turntables/her.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/her.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2158,26 +1621,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Gucci Bloom 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Gucci Bloom 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/gucci-bloom.webp" style="--film:url('./360/turntables/gucci-bloom.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/gucci-bloom.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2211,26 +1670,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Marc Jacobs Daisy 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Marc Jacobs Daisy 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/daisy.webp" style="--film:url('./360/turntables/daisy.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/daisy.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2264,26 +1719,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Versace Bright Crystal 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Versace Bright Crystal 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/bright-crystal.webp" style="--film:url('./360/turntables/bright-crystal.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/bright-crystal.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2312,8 +1763,14 @@ html:not(.enhanced) .stage-load,
     </nav>
   </header><div class="gallery">
     <div class="collection-heading">
-      <h1 tabindex="-1">Men’s <em>fragrances</em></h1>
-      <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+      <div class="collection-copy">
+        <h1 tabindex="-1">Men’s <em>fragrances</em></h1>
+        <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+      </div>
+      <a class="collection-feature" data-nav href="#en-men-sauvage" style="--feature-photo:var(--shot-sauvage)">
+        <span class="feature-bottle" aria-hidden="true"></span>
+        <span class="feature-name">Sauvage<span aria-hidden="true"></span></span>
+      </a>
     </div>
     <div class="showcase">
       <a class="fragrance" data-nav data-card="terre" style="--light:220 146 92;--bottle-scale:0.98;--photo:var(--shot-terre)" href="#en-men-terre">
@@ -2407,26 +1864,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Hermès Terre d’Hermès 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Hermès Terre d’Hermès 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/terre.webp" style="--film:url('./360/turntables/terre.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/terre.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2460,26 +1913,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Dior Sauvage 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Dior Sauvage 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/sauvage.webp" style="--film:url('./360/turntables/sauvage.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/sauvage.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2513,26 +1962,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Versace Eros 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Versace Eros 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/eros.webp" style="--film:url('./360/turntables/eros.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/eros.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2566,26 +2011,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Jean Paul Gaultier Le Male Le Parfum 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Jean Paul Gaultier Le Male Le Parfum 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/le-male.webp" style="--film:url('./360/turntables/le-male.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/le-male.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2619,26 +2060,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Chanel Bleu de Chanel 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Chanel Bleu de Chanel 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/bleu.webp" style="--film:url('./360/turntables/bleu.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/bleu.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2672,26 +2109,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Giorgio Armani Acqua di Giò Profondo 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Giorgio Armani Acqua di Giò Profondo 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/profondo.webp" style="--film:url('./360/turntables/profondo.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/profondo.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2725,26 +2158,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Yves Saint Laurent Y 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Yves Saint Laurent Y 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/ysl-y.webp" style="--film:url('./360/turntables/ysl-y.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/ysl-y.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2778,26 +2207,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Valentino Uomo Born in Roma Intense 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Valentino Uomo Born in Roma Intense 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/born-in-roma.webp" style="--film:url('./360/turntables/born-in-roma.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/born-in-roma.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2831,26 +2256,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Emporio Armani Stronger With You Intensely 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Emporio Armani Stronger With You Intensely 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/stronger.webp" style="--film:url('./360/turntables/stronger.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/stronger.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2884,26 +2305,22 @@ html:not(.enhanced) .stage-load,
     <div class="theater">
       <figure class="product-stage">
     <div class="display-case">
-      <span class="case-rear" aria-hidden="true"></span>
-      <span class="case-panel case-top" aria-hidden="true"></span>
-      <span class="case-panel case-left" aria-hidden="true"></span>
-      <span class="case-panel case-right" aria-hidden="true"></span>
-      <span class="case-panel case-floor" aria-hidden="true"></span>
-      <span class="case-light" aria-hidden="true"></span>
-      <span class="case-pedestal" aria-hidden="true"></span>
       <span class="case-shadow" aria-hidden="true"></span>
-      <span class="orbit-light" aria-hidden="true"></span>
-      <div class="render-surface" role="img" aria-label="Rabanne 1 Million 360° fragrance bottle view" tabindex="0">
+      <div class="render-surface" role="group" aria-label="Rabanne 1 Million 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
           <span class="still-bottle" aria-hidden="true"></span>
-          <span class="turntable-frame" data-film="./360/turntables/one-million.webp" style="--film:url('./360/turntables/one-million.webp')" aria-hidden="true"></span>
+          <span class="turntable-frame" data-film="./360/turntables/one-million.webp" aria-hidden="true"></span>
         </div></div>
       </div>
-      <span class="case-border" aria-hidden="true"></span>
+      <span class="case-glass" aria-hidden="true"></span>
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
+      <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
     <figcaption class="stage-controls">
-      <span>360° view · Drag to rotate</span>
+      <div class="angle-control">
+        <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
+        <span class="angle-value" aria-hidden="true">0°</span>
+      </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
     </figcaption>
   </figure>
@@ -2932,8 +2349,14 @@ html:not(.enhanced) .stage-load,
     </nav>
   </header><div class="gallery">
     <div class="collection-heading">
-      <h1 tabindex="-1">Kadın <em>parfümleri</em></h1>
-      <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+      <div class="collection-copy">
+        <h1 tabindex="-1">Kadın <em>parfümleri</em></h1>
+        <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+      </div>
+      <a class="collection-feature" data-nav href="#tr-women-jadore" style="--feature-photo:var(--shot-jadore)">
+        <span class="feature-bottle" aria-hidden="true"></span>
+        <span class="feature-name">J’adore<span aria-hidden="true"></span></span>
+      </a>
     </div>
     <div class="showcase">
       <a class="fragrance" data-nav data-card="jadore" style="--light:224 169 103;--bottle-scale:0.98;--photo:var(--shot-jadore)" href="#tr-women-jadore">
@@ -3011,204 +2434,7 @@ html:not(.enhanced) .stage-load,
   </div>
   </section>
   </main>
-  <script>
-(() => {
-  const root = document.documentElement;
-  const pages = new Map(Array.from(document.querySelectorAll('.page'), node => [node.id, node]));
-  const fallback = pages.get('tr-women');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const scrollPositions = new Map();
-  const period = 5600;
-  let active = matchingPage();
-  let player;
-
-  function matchingPage() {
-    const hash = location.hash.slice(1);
-    if (pages.has(hash)) return pages.get(hash);
-    const [group, item] = hash.split('/');
-    const lang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'tr';
-    if (group === 'men' || group === 'women') return pages.get([lang, group, item].filter(Boolean).join('-')) || fallback;
-    return pages.get(lang + '-women') || fallback;
-  }
-
-  function film(session) {
-    return session.frame.getAnimations?.().find(animation => animation.animationName === 'turntable');
-  }
-
-  function setPlayback(session, playing) {
-    session.playing = playing;
-    session.stage.toggleAttribute('data-paused', !playing);
-    session.surface.dataset.spinning = String(playing);
-    session.toggle.textContent = playing ? session.toggle.dataset.pauseLabel : session.toggle.dataset.playLabel;
-    const animation = film(session);
-    if (animation) {
-      if (playing) animation.play();
-      else animation.pause();
-    }
-  }
-
-  function seek(session, time) {
-    const animation = film(session);
-    if (animation) animation.currentTime = ((time % period) + period) % period;
-  }
-
-  function release(next) {
-    if (!player) return null;
-    const old = player;
-    player = undefined;
-    const keep = old.page.dataset.product === next.dataset.product
-      ? { time: Number(film(old)?.currentTime || 0), playing: old.playing }
-      : null;
-    old.events.abort();
-    old.frame.style.removeProperty('background-image');
-    delete old.surface.dataset.ready;
-    delete old.surface.dataset.spinning;
-    old.stage.removeAttribute('data-paused');
-    old.stage.removeAttribute('data-grab');
-    old.toggle.disabled = true;
-    return keep;
-  }
-
-  function mount(page, playback) {
-    const stage = page.querySelector('.product-stage');
-    if (!stage) return;
-    const surface = stage.querySelector('.render-surface');
-    const frame = stage.querySelector('.turntable-frame');
-    const image = new Image();
-    const toggle = stage.querySelector('[data-orbit-toggle]');
-    const loader = stage.querySelector('.stage-load');
-    const events = new AbortController();
-    const options = { signal: events.signal };
-    const session = { page, stage, surface, frame, toggle, events, playing: playback?.playing ?? true };
-    player = session;
-    loader.textContent = loader.dataset.message;
-    let retried = false;
-
-    function ready() {
-      if (player !== session || !image.naturalWidth || surface.hasAttribute('data-ready')) return;
-      if (retried) frame.style.backgroundImage = `url("${image.src}")`;
-      surface.dataset.ready = '';
-      toggle.disabled = false;
-      seek(session, playback?.time || 0);
-      setPlayback(session, session.playing);
-    }
-
-    image.addEventListener('load', ready, options);
-    image.addEventListener('error', () => {
-      if (player !== session) return;
-      if (!retried) {
-        retried = true;
-        image.src = frame.dataset.film + '?retry=1';
-      } else loader.textContent = loader.dataset.error;
-    }, options);
-    image.src = frame.dataset.film;
-    if (image.complete) ready();
-
-    toggle.addEventListener('click', () => setPlayback(session, !session.playing), options);
-
-    surface.addEventListener('pointerdown', event => {
-      const animation = film(session);
-      if (!animation || !surface.hasAttribute('data-ready') || event.button !== 0) return;
-      session.grab = { id: event.pointerId, start: event.clientX, time: Number(animation.currentTime || 0) };
-      animation.pause();
-      stage.dataset.grab = '';
-      surface.setPointerCapture(event.pointerId);
-    }, options);
-
-    surface.addEventListener('pointermove', event => {
-      if (event.pointerId !== session.grab?.id) return;
-      const delta = (event.clientX - session.grab.start) / Math.max(120, surface.clientWidth);
-      seek(session, session.grab.time + delta * period);
-    }, options);
-
-    function endGrab(event) {
-      if (event.pointerId !== session.grab?.id) return;
-      session.grab = undefined;
-      delete stage.dataset.grab;
-      setPlayback(session, session.playing);
-    }
-
-    surface.addEventListener('pointerup', endGrab, options);
-    surface.addEventListener('pointercancel', endGrab, options);
-    surface.addEventListener('lostpointercapture', endGrab, options);
-    surface.addEventListener('keydown', event => {
-      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-      const animation = film(session);
-      if (!animation) return;
-      event.preventDefault();
-      event.stopPropagation();
-      seek(session, Number(animation.currentTime || 0) + (event.key === 'ArrowLeft' ? -.055 : .055) * period);
-    }, options);
-  }
-
-  function title() {
-    document.title = active.dataset.title;
-    root.lang = active.lang;
-  }
-
-  function show(next, link) {
-    if (next === active) return;
-    const before = active.dataset.product;
-    const after = next.dataset.product;
-    const currentScroll = scrollY;
-    const sameView = before === after && active.dataset.collection === next.dataset.collection;
-    const playback = release(next);
-    if (!before) scrollPositions.set(active.id, currentScroll);
-    delete active.dataset.active;
-    active = next;
-    active.dataset.active = '';
-    title();
-    mount(active, playback);
-    scrollTo(0, sameView ? currentScroll : (after ? 0 : scrollPositions.get(active.id) || 0));
-
-    if (link) {
-      const inHeader = link.closest('.language, .catalogue-nav');
-      const target = inHeader
-        ? Array.from(active.querySelectorAll('.language a, .catalogue-nav a')).find(candidate => candidate.textContent.trim() === link.textContent.trim())
-        : (before && !after ? active.querySelector(`[data-card="${before}"]`) : active.querySelector('h1'));
-      target?.focus({ preventScroll: true });
-    }
-
-    if (!reducedMotion.matches && !sameView) {
-      const entrance = active.querySelector(after ? '.display-case' : '.showcase');
-      entrance?.animate?.([{ opacity: .44, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], {
-        duration: 300, easing: 'ease-out',
-      });
-    }
-  }
-
-  active.dataset.active = '';
-  root.classList.add('enhanced');
-  title();
-  mount(active);
-
-  document.addEventListener('click', event => {
-    const link = event.target.closest?.('a[data-nav]');
-    if (!link || event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    const href = link.getAttribute('href');
-    const next = pages.get(href.slice(1));
-    if (!next) return;
-    event.preventDefault();
-    if (href !== location.hash) {
-      try { history.pushState(null, '', href); }
-      catch { try { location.hash = href; } catch {} }
-    }
-    show(next, link);
-  });
-
-  document.addEventListener('keydown', event => {
-    if (!active.dataset.product || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    const controls = { Escape: '[data-back]', ArrowLeft: '[data-step="-1"]', ArrowRight: '[data-step="1"]' };
-    if (!controls[event.key]) return;
-    event.preventDefault();
-    active.querySelector(controls[event.key])?.click();
-  });
-
-  window.addEventListener('popstate', () => show(matchingPage()));
-  window.addEventListener('hashchange', () => show(matchingPage()));
-})();
-
-</script>
+  <script src="./360/gallery.js" defer></script>
 </body>
 <!--
 
