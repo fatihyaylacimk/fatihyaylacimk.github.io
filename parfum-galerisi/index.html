@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#141210">
-  <meta name="gallery-build" content="studio-360-v4">
-  <meta name="description" content="Kadın ve erkek parfümlerini 360° cam vitrinde keşfet, koku notalarını Türkçe veya İngilizce incele.">
+  <meta name="gallery-build" content="studio-photo-v5">
+  <meta name="description" content="Kadın ve erkek parfümlerini ürün fotoğraflarıyla keşfet, şişe modellerini ve koku notalarını incele.">
   <title>Parfüm Galerisi</title>
   <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABzElEQVR4nO2by1EDMRBE29xcRREHwZASJ1IiGLKBExcKy6OZ/lCF+mhL8ry36/VKK18er0+f+Md5SBeQzhGQLiCdIyBdQDpHQLqAdI6AdAEf76/Rz48K+IZPSogJ+AmdkhARcAs2IcEu4B6kW4JVwG9wzy9vpXaq2ASs4JMSLAIqRz4lQS6getrfel0tQSpgB371vlKCTEAHftVOJUEiYAK/aq+QQBfAgF/1Y0ugCmDCr/ozJdAEdOErMEoJFAFT+KSEsQDWkU9JGAlgn/YJCW0Bqu+8W0JLgPKCV23HkrAtQA2/054hYUuAC36n31RCWYAbfqf/REJJQAp+Z5yuhJKA7uDT2+CdcboHqfwVSElQwgObF0G3BDU80PgZdElwwAPNGyG1BBc8MLgVVklwwgPDyRBbghseIEyHWRIS8ABpQWQqIQUPABfmTlFVkapxAfKiqGLFRgkPCJbFmRLU8IDowQhDggMeED4am0hwwQPih6MdCU54wPB4fEeCGx4wbZCoSEjAA8YtMisJKXiAfCNUiXMlqRL7NjnGbJCZyEbJyWyQndhW2c5sUJHoZumd2aAq9ovgX0v8/wLpHAHpAtI5AtIFpHMEpAtI5wt3ATcvGYJHzQAAAABJRU5ErkJggg==">
   <style>:root{
@@ -85,7 +85,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
   </style>
-  <link rel="stylesheet" href="./360/gallery.css?v=4">
+  <link rel="stylesheet" href="./360/gallery.css?v=5">
 </head>
 <body>
   <main id="site">
@@ -105,7 +105,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="DIOR J’adore şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-jadore-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Dior J’adore parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -117,12 +120,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-jadore-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -154,7 +162,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="CHANEL Chance Eau Tendre şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-chance-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Chanel Chance Eau Tendre parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -166,12 +177,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-chance-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -203,7 +219,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="YVES SAINT LAURENT Libre şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-libre-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Yves Saint Laurent Libre parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -215,12 +234,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-libre-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -252,7 +276,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="PRADA Paradoxe şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-paradoxe-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Prada Paradoxe parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -264,12 +291,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-paradoxe-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -301,7 +333,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="CAROLINA HERRERA Good Girl şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-good-girl-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Carolina Herrera Good Girl parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -313,12 +348,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-good-girl-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -350,7 +390,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="LANCÔME La Vie Est Belle şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-lancome-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Lancôme La Vie Est Belle parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -362,12 +405,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-lancome-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -399,7 +447,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="BURBERRY Her şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-her-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Burberry Her parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -411,12 +462,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-her-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -448,7 +504,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="GUCCI Bloom şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-gucci-bloom-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Gucci Bloom parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -460,12 +519,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-gucci-bloom-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -497,7 +561,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="MARC JACOBS Daisy şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-daisy-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Marc Jacobs Daisy parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -509,12 +576,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-daisy-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -546,7 +618,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="VERSACE Bright Crystal şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-women-bright-crystal-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Versace Bright Crystal parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -558,12 +633,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-women-bright-crystal-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -593,7 +673,7 @@
     <div class="collection-heading">
       <div class="collection-copy">
         <h1 tabindex="-1">Erkek <em>parfümleri</em></h1>
-        <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+        <p class="gallery-instruction">Fotoğrafları ve koku notalarını görmek için bir parfüm seç.</p>
       </div>
       <a class="collection-feature" data-nav href="#tr-men-sauvage" style="--feature-photo:var(--shot-sauvage)">
         <span class="feature-bottle" aria-hidden="true"></span>
@@ -691,7 +771,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="HERMÈS Terre d’Hermès şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-terre-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Hermès Terre d’Hermès parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -703,12 +786,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-terre-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -740,7 +828,13 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view data-tone="desert">
+      <img class="official-photo" data-photo-frame data-tone="desert" src="./360/photos/sauvage-campaign.webp" width="1440" height="810" loading="lazy" decoding="async" alt="Dior Sauvage Eau de Parfum şişesi, gün batımında çöl manzarasında">
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/sauvage-front.webp" width="1332" height="1440" loading="lazy" decoding="async" alt="Dior Sauvage Eau de Parfum şişesinin önden stüdyo fotoğrafı" hidden>
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/sauvage-cap.webp" width="960" height="1440" loading="lazy" decoding="async" alt="Dior Sauvage şişe kapağının içindeki arı simgesi, yakın çekim" hidden>
+      <span class="photo-packshot" role="img" aria-label="DIOR Sauvage şişesinin fotoğrafı" hidden></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-sauvage-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Dior Sauvage parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -752,12 +846,22 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+      <div class="photo-choices" data-photo-choices role="group" aria-label="Ürün fotoğrafları">
+        <button type="button" class="photo-choice" data-photo-choice="0" aria-pressed="true"><img src="./360/photos/sauvage-campaign.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Kampanya</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="1" aria-pressed="false"><img src="./360/photos/sauvage-front.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Şişe</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="2" aria-pressed="false"><img src="./360/photos/sauvage-cap.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Kapak</span></button>
+      </div>
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-sauvage-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -789,7 +893,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="VERSACE Eros şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-eros-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Versace Eros parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -801,12 +908,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-eros-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -838,7 +950,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="JEAN PAUL GAULTIER Le Male Le Parfum şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-le-male-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Jean Paul Gaultier Le Male Le Parfum parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -850,12 +965,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-le-male-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -887,7 +1007,12 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view data-tone="blue">
+      <img class="official-photo" data-photo-frame data-tone="blue" src="./360/photos/bleu-campaign.webp" width="1081" height="1440" loading="lazy" decoding="async" alt="Bleu de Chanel Eau de Parfum şişesinin mavi ışıklı fotoğrafı">
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/bleu-detail.webp" width="924" height="924" loading="lazy" decoding="async" alt="Bleu de Chanel şişesi, püskürtücü ve kapağının yakın çekimi" hidden>
+      <span class="photo-packshot" role="img" aria-label="CHANEL Bleu de Chanel şişesinin fotoğrafı" hidden></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-bleu-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Chanel Bleu de Chanel parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -899,12 +1024,21 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+      <div class="photo-choices" data-photo-choices role="group" aria-label="Ürün fotoğrafları">
+        <button type="button" class="photo-choice" data-photo-choice="0" aria-pressed="true"><img src="./360/photos/bleu-campaign.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Şişe</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="1" aria-pressed="false"><img src="./360/photos/bleu-detail.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Detay</span></button>
+      </div>
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-bleu-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -936,7 +1070,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="GIORGIO ARMANI Acqua di Giò Profondo şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-profondo-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Giorgio Armani Acqua di Giò Profondo parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -948,12 +1085,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-profondo-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -985,7 +1127,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="YVES SAINT LAURENT Y şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-ysl-y-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Yves Saint Laurent Y parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -997,12 +1142,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-ysl-y-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1034,7 +1184,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="VALENTINO Uomo Born in Roma Intense şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-born-in-roma-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Valentino Uomo Born in Roma Intense parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1046,12 +1199,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-born-in-roma-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1083,7 +1241,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="EMPORIO ARMANI Stronger With You Intensely şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-stronger-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Emporio Armani Stronger With You Intensely parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1095,12 +1256,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-stronger-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1132,7 +1298,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="RABANNE 1 Million şişesinin fotoğrafı"></span>
+    </div>
+    <div class="display-case model-case" id="tr-men-one-million-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Rabanne 1 Million parfüm şişesinin 360° görünümü" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1144,12 +1313,17 @@
       <p class="stage-load" role="status" data-message="360° vitrin yükleniyor…" data-error="360° görünüm yüklenemedi.">360° vitrin yükleniyor…</p>
       <p class="stage-help" aria-hidden="true">Çevirmek için sürükle</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Fotoğrafa dön" data-model-label="360° model" aria-expanded="false" aria-controls="tr-men-one-million-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Şişenin dönüş açısı" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Durdur" data-play-label="Döndür" disabled>Durdur</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1179,7 +1353,7 @@
     <div class="collection-heading">
       <div class="collection-copy">
         <h1 tabindex="-1">Women’s <em>fragrances</em></h1>
-        <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+        <p class="gallery-instruction">Choose a fragrance to see its photos and notes.</p>
       </div>
       <a class="collection-feature" data-nav href="#en-women-jadore" style="--feature-photo:var(--shot-jadore)">
         <span class="feature-bottle" aria-hidden="true"></span>
@@ -1277,7 +1451,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the DIOR J’adore bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-jadore-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Dior J’adore 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1289,12 +1466,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-jadore-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1326,7 +1508,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the CHANEL Chance Eau Tendre bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-chance-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Chanel Chance Eau Tendre 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1338,12 +1523,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-chance-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1375,7 +1565,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the YVES SAINT LAURENT Libre bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-libre-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Yves Saint Laurent Libre 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1387,12 +1580,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-libre-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1424,7 +1622,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the PRADA Paradoxe bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-paradoxe-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Prada Paradoxe 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1436,12 +1637,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-paradoxe-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1473,7 +1679,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the CAROLINA HERRERA Good Girl bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-good-girl-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Carolina Herrera Good Girl 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1485,12 +1694,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-good-girl-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1522,7 +1736,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the LANCÔME La Vie Est Belle bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-lancome-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Lancôme La Vie Est Belle 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1534,12 +1751,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-lancome-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1571,7 +1793,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the BURBERRY Her bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-her-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Burberry Her 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1583,12 +1808,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-her-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1620,7 +1850,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the GUCCI Bloom bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-gucci-bloom-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Gucci Bloom 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1632,12 +1865,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-gucci-bloom-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1669,7 +1907,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the MARC JACOBS Daisy bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-daisy-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Marc Jacobs Daisy 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1681,12 +1922,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-daisy-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1718,7 +1964,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the VERSACE Bright Crystal bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-women-bright-crystal-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Versace Bright Crystal 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1730,12 +1979,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-women-bright-crystal-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1765,7 +2019,7 @@
     <div class="collection-heading">
       <div class="collection-copy">
         <h1 tabindex="-1">Men’s <em>fragrances</em></h1>
-        <p class="gallery-instruction">Choose a fragrance for a 360° view.</p>
+        <p class="gallery-instruction">Choose a fragrance to see its photos and notes.</p>
       </div>
       <a class="collection-feature" data-nav href="#en-men-sauvage" style="--feature-photo:var(--shot-sauvage)">
         <span class="feature-bottle" aria-hidden="true"></span>
@@ -1863,7 +2117,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the HERMÈS Terre d’Hermès bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-terre-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Hermès Terre d’Hermès 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1875,12 +2132,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-terre-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1912,7 +2174,13 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view data-tone="desert">
+      <img class="official-photo" data-photo-frame data-tone="desert" src="./360/photos/sauvage-campaign.webp" width="1440" height="810" loading="lazy" decoding="async" alt="Dior Sauvage Eau de Parfum bottle against a desert sunset">
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/sauvage-front.webp" width="1332" height="1440" loading="lazy" decoding="async" alt="Front studio photograph of the Dior Sauvage Eau de Parfum bottle" hidden>
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/sauvage-cap.webp" width="960" height="1440" loading="lazy" decoding="async" alt="Close-up of the bee emblem inside the Sauvage cap" hidden>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the DIOR Sauvage bottle" hidden></span>
+    </div>
+    <div class="display-case model-case" id="en-men-sauvage-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Dior Sauvage 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1924,12 +2192,22 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+      <div class="photo-choices" data-photo-choices role="group" aria-label="Product photos">
+        <button type="button" class="photo-choice" data-photo-choice="0" aria-pressed="true"><img src="./360/photos/sauvage-campaign.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Campaign</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="1" aria-pressed="false"><img src="./360/photos/sauvage-front.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Bottle</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="2" aria-pressed="false"><img src="./360/photos/sauvage-cap.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Cap</span></button>
+      </div>
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-sauvage-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -1961,7 +2239,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the VERSACE Eros bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-eros-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Versace Eros 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -1973,12 +2254,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-eros-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2010,7 +2296,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the JEAN PAUL GAULTIER Le Male Le Parfum bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-le-male-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Jean Paul Gaultier Le Male Le Parfum 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2022,12 +2311,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-le-male-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2059,7 +2353,12 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view data-tone="blue">
+      <img class="official-photo" data-photo-frame data-tone="blue" src="./360/photos/bleu-campaign.webp" width="1081" height="1440" loading="lazy" decoding="async" alt="Bleu de Chanel Eau de Parfum bottle photographed in blue light">
+      <img class="official-photo" data-photo-frame data-tone="light" src="./360/photos/bleu-detail.webp" width="924" height="924" loading="lazy" decoding="async" alt="Close-up of the Bleu de Chanel bottle, atomizer and cap" hidden>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the CHANEL Bleu de Chanel bottle" hidden></span>
+    </div>
+    <div class="display-case model-case" id="en-men-bleu-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Chanel Bleu de Chanel 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2071,12 +2370,21 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+      <div class="photo-choices" data-photo-choices role="group" aria-label="Product photos">
+        <button type="button" class="photo-choice" data-photo-choice="0" aria-pressed="true"><img src="./360/photos/bleu-campaign.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Bottle</span></button>
+        <button type="button" class="photo-choice" data-photo-choice="1" aria-pressed="false"><img src="./360/photos/bleu-detail.webp" width="42" height="42" loading="lazy" decoding="async" alt=""><span>Detail</span></button>
+      </div>
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-bleu-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2108,7 +2416,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the GIORGIO ARMANI Acqua di Giò Profondo bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-profondo-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Giorgio Armani Acqua di Giò Profondo 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2120,12 +2431,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-profondo-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2157,7 +2473,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the YVES SAINT LAURENT Y bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-ysl-y-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Yves Saint Laurent Y 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2169,12 +2488,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-ysl-y-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2206,7 +2530,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the VALENTINO Uomo Born in Roma Intense bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-born-in-roma-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Valentino Uomo Born in Roma Intense 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2218,12 +2545,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-born-in-roma-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2255,7 +2587,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the EMPORIO ARMANI Stronger With You Intensely bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-stronger-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Emporio Armani Stronger With You Intensely 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2267,12 +2602,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-stronger-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2304,7 +2644,10 @@
     </header>
     <div class="theater">
       <figure class="product-stage">
-    <div class="display-case">
+    <div class="display-case photo-case" data-photo-view>
+      <span class="photo-packshot" role="img" aria-label="Photograph of the RABANNE 1 Million bottle"></span>
+    </div>
+    <div class="display-case model-case" id="en-men-one-million-model" data-model-view hidden>
       <span class="case-shadow" aria-hidden="true"></span>
       <div class="render-surface" role="group" aria-label="Rabanne 1 Million 360° fragrance bottle view" tabindex="0">
         <div class="float-object"><div class="film-window">
@@ -2316,12 +2659,17 @@
       <p class="stage-load" role="status" data-message="Loading the 360° display…" data-error="The 360° view could not load.">Loading the 360° display…</p>
       <p class="stage-help" aria-hidden="true">Drag to rotate</p>
     </div>
-    <figcaption class="stage-controls">
+    <figcaption class="stage-caption">
+      <div class="stage-toolbar">
+        <button class="model-toggle" type="button" data-model-toggle data-photo-label="Back to photo" data-model-label="360° model" aria-expanded="false" aria-controls="en-men-one-million-model">360° model</button>
+      </div>
+      <div class="stage-controls" data-model-controls hidden>
       <div class="angle-control">
         <input type="range" min="0" max="79" step="1" value="0" aria-label="Bottle rotation angle" disabled>
         <span class="angle-value" aria-hidden="true">0°</span>
       </div>
       <button class="orbit-toggle" type="button" data-orbit-toggle data-pause-label="Pause" data-play-label="Rotate" disabled>Pause</button>
+      </div>
     </figcaption>
   </figure>
       <article class="product-info">
@@ -2351,7 +2699,7 @@
     <div class="collection-heading">
       <div class="collection-copy">
         <h1 tabindex="-1">Kadın <em>parfümleri</em></h1>
-        <p class="gallery-instruction">360° görünümü açmak için bir parfüm seç.</p>
+        <p class="gallery-instruction">Fotoğrafları ve koku notalarını görmek için bir parfüm seç.</p>
       </div>
       <a class="collection-feature" data-nav href="#tr-women-jadore" style="--feature-photo:var(--shot-jadore)">
         <span class="feature-bottle" aria-hidden="true"></span>
@@ -2434,7 +2782,7 @@
   </div>
   </section>
   </main>
-  <script src="./360/gallery.js?v=4" defer></script>
+  <script src="./360/gallery.js?v=5" defer></script>
 </body>
 <!--
 
@@ -2674,6 +3022,8 @@ https://www.parfumo.com/Perfumes/Burberry/her-eau-de-parfum
 https://olfamo.com/en/parfums/yves-saint-laurent/y-eau-de-parfum
 https://www.fragrantica.com/perfume/Valentino/Valentino-Uomo-Born-In-Roma-Intense-78740.html
 
+Official product photographs in the Sauvage gallery · https://www.dior.com/en_gb/beauty/products/sauvage-eau-de-parfum-F078522009.html
+Official product photographs in the Bleu de Chanel gallery · https://www.chanel.com/us/fragrance/p/107350/bleu-de-chanel-eau-de-parfum-spray/
 The bottle shapes and 360° renders are based on product photography.
 -->
 </html>

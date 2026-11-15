@@ -10,6 +10,7 @@
   const turnDuration = 8000;
   const frontViewTime = 1050;
   let active = matchingPage();
+  let media;
   let player;
 
   function matchingPage() {
@@ -64,13 +65,10 @@
     syncPlayback(session);
   }
 
-  function release(next) {
+  function releaseModel() {
     if (!player) return null;
     const old = player;
     player = undefined;
-    const playback = old.page.dataset.product === next.dataset.product
-      ? { position: old.position, playing: old.playing }
-      : null;
     old.events.abort();
     cancelAnimationFrame(old.animation);
     old.surface.style.removeProperty('--film');
@@ -80,20 +78,17 @@
     delete old.stage.dataset.grab;
     old.toggle.disabled = true;
     old.range.disabled = true;
-    return playback;
+    return { position: old.position, playing: old.playing };
   }
 
-  function mount(page, playback) {
-    const stage = page.querySelector('.product-stage');
-    if (!stage) return;
-
+  function mountModel(stage, playback) {
     const surface = stage.querySelector('.render-surface');
     const frame = stage.querySelector('.turntable-frame');
     const loader = stage.querySelector('.stage-load');
     const events = new AbortController();
     const options = { signal: events.signal };
     const session = {
-      page, stage, surface, events,
+      stage, surface, events,
       toggle: stage.querySelector('[data-orbit-toggle]'),
       range: stage.querySelector('input[type="range"]'),
       angle: stage.querySelector('.angle-value'),
@@ -185,6 +180,77 @@
     }, options);
   }
 
+  function showBackup(session) {
+    session.photos[session.selected].hidden = true;
+    delete session.photoView.dataset.tone;
+    session.backup.hidden = false;
+  }
+
+  function selectPhoto(session, index) {
+    const photo = session.photos[index];
+    if (!photo) return;
+    session.selected = index;
+    session.photos.forEach((image, offset) => { image.hidden = offset !== index; });
+    session.choices.forEach((button, offset) => button.setAttribute('aria-pressed', String(offset === index)));
+    session.photoView.dataset.tone = photo.dataset.tone;
+    session.backup.hidden = true;
+    if (photo.complete && !photo.naturalWidth) showBackup(session);
+  }
+
+  function setView(session, showingModel) {
+    session.showingModel = showingModel;
+    session.photoView.hidden = showingModel;
+    session.modelView.hidden = !showingModel;
+    session.modelControls.hidden = !showingModel;
+    if (session.photoChoices) session.photoChoices.hidden = showingModel;
+    session.modelToggle.setAttribute('aria-expanded', String(showingModel));
+    session.modelToggle.textContent = showingModel ? session.modelToggle.dataset.photoLabel : session.modelToggle.dataset.modelLabel;
+    if (showingModel) mountModel(session.stage, session.playback);
+    else if (player) session.playback = releaseModel();
+  }
+
+  function releaseMedia(next) {
+    if (!media) return null;
+    const old = media;
+    media = undefined;
+    old.events.abort();
+    const playback = releaseModel() ?? old.playback;
+    if (old.page.dataset.product !== next.dataset.product) return null;
+    return { selected: old.selected, showingModel: old.showingModel, playback };
+  }
+
+  function mountMedia(page, saved) {
+    const stage = page.querySelector('.product-stage');
+    if (!stage) return;
+    const events = new AbortController();
+    const options = { signal: events.signal };
+    const session = {
+      page, stage, events,
+      photoView: stage.querySelector('[data-photo-view]'),
+      modelView: stage.querySelector('[data-model-view]'),
+      modelToggle: stage.querySelector('[data-model-toggle]'),
+      modelControls: stage.querySelector('[data-model-controls]'),
+      photoChoices: stage.querySelector('[data-photo-choices]'),
+      backup: stage.querySelector('.photo-packshot'),
+      photos: Array.from(stage.querySelectorAll('[data-photo-frame]')),
+      choices: Array.from(stage.querySelectorAll('[data-photo-choice]')),
+      selected: saved?.selected ?? 0,
+      playback: saved?.playback,
+    };
+    media = session;
+    session.photos.forEach((photo, index) => {
+      photo.addEventListener('error', () => {
+        if (session.selected === index) showBackup(session);
+      }, options);
+    });
+    session.choices.forEach((button, index) => {
+      button.addEventListener('click', () => selectPhoto(session, index), options);
+    });
+    session.modelToggle.addEventListener('click', () => setView(session, !session.showingModel), options);
+    selectPhoto(session, session.selected);
+    setView(session, saved?.showingModel ?? false);
+  }
+
   function activate(page) {
     page.dataset.active = '';
     document.title = page.dataset.title;
@@ -197,12 +263,12 @@
     const after = next.dataset.product;
     const currentScroll = scrollY;
     const sameView = before === after && active.dataset.collection === next.dataset.collection;
-    const playback = release(next);
+    const mediaState = releaseMedia(next);
     if (!before) scrollPositions.set(active.id, currentScroll);
     delete active.dataset.active;
     active = next;
     activate(active);
-    mount(active, playback);
+    mountMedia(active, mediaState);
     scrollTo(0, sameView ? currentScroll : (after ? 0 : scrollPositions.get(active.id) || 0));
 
     if (link) {
@@ -214,7 +280,7 @@
     }
 
     if (!reducedMotion.matches && !sameView) {
-      const entrance = active.querySelector(after ? '.display-case' : '.showcase');
+      const entrance = active.querySelector(after ? '.display-case:not([hidden])' : '.showcase');
       entrance?.animate?.([{ opacity: .48, transform: 'translateY(5px)' }, { opacity: 1, transform: 'none' }], {
         duration: 280, easing: 'ease-out',
       });
@@ -224,7 +290,7 @@
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   activate(active);
   root.classList.add('enhanced');
-  mount(active);
+  mountMedia(active);
 
   document.addEventListener('click', event => {
     const link = event.target.closest?.('a[data-nav]');

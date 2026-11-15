@@ -118,6 +118,10 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   background: var(--studio) center 65% / cover no-repeat;
   mask-image: linear-gradient(90deg, transparent, #000 33%, #000 92%, #000a);
 }
+.page[data-collection="men"] .collection-feature::before {
+  background-image: url('./photos/sauvage-campaign.webp');
+  background-position: center;
+}
 .collection-feature::after {
   background: linear-gradient(0deg, var(--hero-ground), transparent 16%, transparent 95%, #120e0e44);
   mask-image: linear-gradient(90deg, transparent, #000 31%);
@@ -133,6 +137,7 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   filter: drop-shadow(4px 18px 16px #080603b3);
   transition: transform .33s ease, filter .33s ease;
 }
+.page[data-collection="men"] .feature-bottle { display: none; }
 .feature-name {
   position: absolute;
   left: 50%;
@@ -153,6 +158,11 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
 }
 .feature-name span { position: relative; width: 7px; height: 7px; border: solid var(--gold); border-width: 1px 1px 0 0; }
 .feature-name span::after { content: ''; position: absolute; top: 2px; right: -1px; width: 8px; height: 1px; transform: rotate(-45deg); background: var(--gold); }
+.page[data-collection="men"] .feature-name {
+  left: auto;
+  right: clamp(17px, 4vw, 65px);
+  transform: none;
+}
 .collection-feature:focus-visible { outline-offset: -5px; }
 @media (hover: hover) {
   .collection-feature:hover .feature-bottle { transform: translate(-50%, -4px); filter: drop-shadow(4px 21px 18px #060503b3); }
@@ -214,7 +224,7 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   filter: drop-shadow(4px 8px 10px #090706d9);
   transition: transform .37s cubic-bezier(.22,.75,.2,1);
 }
-[data-card="bleu"] .card-bottle, [data-product="bleu"] .still-bottle {
+[data-card="bleu"] .card-bottle, [data-product="bleu"] :is(.still-bottle, .photo-packshot) {
   left: 50%;
   right: auto;
   aspect-ratio: 475 / 650;
@@ -225,7 +235,7 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   bottom: 6%;
   height: calc(80% * var(--bottle-scale, 1));
 }
-[data-card="bleu"] .card-bottle::before, [data-product="bleu"] .still-bottle::before {
+[data-card="bleu"] .card-bottle::before, [data-product="bleu"] :is(.still-bottle, .photo-packshot)::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -256,6 +266,7 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   padding: clamp(14px, 3.6svh, 47px) var(--gutter) 39px;
 }
 .product-stage { min-width: 0; width: min(100%, calc(max(300px, 100svh - 165px) * 1.5)); justify-self: center; }
+.product-stage [hidden] { display: none !important; }
 .display-case {
   position: relative;
   isolation: isolate;
@@ -278,6 +289,24 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
     mask-composite: intersect;
   }
 }
+.photo-case[data-tone] {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #111719;
+}
+.photo-case[data-tone]::before { display: none; }
+.photo-case[data-tone="light"] { background: #efeff1; }
+.photo-case[data-tone="blue"] { background: radial-gradient(ellipse at 50% 58%, #19314d, #050a12 77%); }
+.official-photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.official-photo[data-tone="desert"] { object-fit: cover; object-position: center 56%; }
+.photo-packshot {
+  position: absolute;
+  inset: 10% 16% 20%;
+  display: block;
+  background: var(--photo) center bottom / contain no-repeat;
+  filter: drop-shadow(1px 11px 16px #090603a6);
+}
+[data-product="bleu"] .photo-packshot { bottom: 12%; }
 .case-glass, .case-shadow { position: absolute; pointer-events: none; }
 .case-glass { z-index: 0; inset: 2% 5% 10%; background: radial-gradient(ellipse 49% 63% at 52% 49%, rgb(var(--light) / .13), transparent 74%); }
 .case-shadow { z-index: 1; inset: auto 32% 18%; height: 5%; background: radial-gradient(ellipse, #060504ae, transparent 71%); }
@@ -327,7 +356,30 @@ html:not(.enhanced) .page:target ~ .default-page { display: none; }
   pointer-events: none;
 }
 
-.stage-controls { display: none; }
+.stage-caption, .stage-controls { display: none; }
+html.enhanced .stage-caption { display: block; margin-top: 10px; }
+.stage-toolbar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; }
+.photo-choices { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 7px; }
+.photo-choice, .model-toggle {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #ba8d5a14;
+  color: var(--ink);
+  cursor: pointer;
+}
+.photo-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 9px 3px 3px;
+  font-size: .73rem;
+  font-weight: 650;
+}
+.photo-choice img { display: block; width: 36px; height: 36px; border-radius: 2px; object-fit: cover; }
+.photo-choice[aria-pressed="true"], .photo-choice:hover, .model-toggle:hover { border-color: #dfbe95b3; }
+.photo-choice[aria-pressed="true"] { background: #b7864e32; }
+.model-toggle { margin-inline-start: auto; padding: 5px 13px; color: var(--gold); font-size: .78rem; font-weight: 700; white-space: nowrap; }
 html.enhanced .stage-controls {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -414,6 +466,11 @@ html.enhanced .stage-controls {
   .fragrance-brand { font-size: .59rem; letter-spacing: .08em; }
   .theater { gap: 13px; padding-top: 9px; }
   .display-case { --stage-edge: 6%; aspect-ratio: 1.13; }
+  .photo-choices { gap: 6px; }
+  .photo-choice { width: 45px; padding: 3px; }
+  .photo-choice img { width: 100%; }
+  .photo-choice span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .model-toggle { padding-inline: 10px; }
   .product-info { padding-top: 9px; }
   .product-info::before { margin-bottom: 15px; }
 }
