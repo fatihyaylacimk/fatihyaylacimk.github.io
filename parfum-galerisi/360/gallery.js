@@ -8,6 +8,7 @@
   const rows = 8;
   const frames = columns * rows;
   const turnDuration = 8000;
+  const frontViewTime = 1050;
   let active = matchingPage();
   let player;
 
@@ -48,8 +49,10 @@
 
     let previousTime;
     function advance(time) {
-      if (previousTime !== undefined) seek(session, session.position + (time - previousTime) * frames / turnDuration);
-      previousTime = time;
+      if (time >= session.frontViewUntil) {
+        if (previousTime !== undefined) seek(session, session.position + (time - previousTime) * frames / turnDuration);
+        previousTime = time;
+      }
       session.animation = requestAnimationFrame(advance);
     }
     session.animation = requestAnimationFrame(advance);
@@ -57,6 +60,7 @@
 
   function setPlayback(session, playing) {
     session.playing = playing;
+    session.frontViewUntil = 0;
     syncPlayback(session);
   }
 
@@ -70,6 +74,7 @@
     old.events.abort();
     cancelAnimationFrame(old.animation);
     old.surface.style.removeProperty('--film');
+    old.surface.style.removeProperty('--frame-ratio');
     delete old.surface.dataset.ready;
     delete old.surface.dataset.spinning;
     delete old.stage.dataset.grab;
@@ -95,6 +100,7 @@
       playing: playback?.playing ?? !reducedMotion.matches,
       position: playback?.position ?? 0,
       animation: 0,
+      frontViewUntil: 0,
       ready: false,
     };
     player = session;
@@ -107,6 +113,8 @@
     function ready() {
       if (player !== session || !image.naturalWidth || session.ready) return;
       surface.style.setProperty('--film', `url("${image.src}")`);
+      surface.style.setProperty('--frame-ratio', `${image.naturalWidth / columns} / ${image.naturalHeight / rows}`);
+      if (!playback && session.playing) session.frontViewUntil = performance.now() + frontViewTime;
       seek(session, session.position);
       session.ready = true;
       surface.dataset.ready = '';
