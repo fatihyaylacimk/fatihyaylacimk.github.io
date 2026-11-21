@@ -8,6 +8,7 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
   if (url.pathname.startsWith('/yaylaci-kuyumculuk/')) return;
   if (url.pathname === '/parfum-galerisi' || url.pathname.startsWith('/parfum-galerisi/')) return;
+  if (url.pathname === '/why-zero' || url.pathname.startsWith('/why-zero/')) return;
 
   event.respondWith(caches.match(request).then(cached => cached || fetch(request).then(response => {
     if (response.ok) {
