@@ -9,6 +9,7 @@ self.addEventListener('fetch', event => {
   if (url.pathname.startsWith('/yaylaci-kuyumculuk/')) return;
   if (url.pathname === '/parfum-galerisi' || url.pathname.startsWith('/parfum-galerisi/')) return;
   if (url.pathname === '/why-zero' || url.pathname.startsWith('/why-zero/')) return;
+  if (url.pathname === '/veiltide-depth-40' || url.pathname.startsWith('/veiltide-depth-40/')) return;
 
   event.respondWith(caches.match(request).then(cached => cached || fetch(request).then(response => {
     if (response.ok) {
