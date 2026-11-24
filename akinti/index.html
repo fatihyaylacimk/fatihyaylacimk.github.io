@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f2ed">
+  <meta name="description" content="AKINTI is a modular rainwear concept for city commutes. Explore five pieces, try the visor, and build your kit.">
+  <title>AKINTI — Rain Line</title>
+  <link rel="stylesheet" href="styles.css?v=2-en">
+  <link rel="icon" type="image/png" href="assets/akinti-icon.png">
+  <script src="app.js?v=2-en" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="AKINTI, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>AKINTI</span>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#system">System</a>
+      <a href="#collection">Collection</a>
+      <a href="#field-notes">Field notes</a>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <button class="selection-toggle" id="selection-toggle" type="button" aria-haspopup="dialog">
+        <span class="bag-icon" aria-hidden="true"></span>
+        <span class="selection-label">My kit</span>
+        <span class="count" id="selection-count" aria-hidden="true">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-composition" id="hero-composition" data-visor="open">
+          <div class="hero-word" aria-hidden="true">AKINTI</div>
+          <div class="hero-accent" aria-hidden="true"></div>
+          <div class="hero-portrait">
+            <img class="hero-photo hero-photo-clear" src="assets/model-visor-off.webp"
+              srcset="assets/model-visor-off-mobile.webp 650w, assets/model-visor-off.webp 1122w"
+              sizes="(max-width: 760px) 90vw, 55vw" width="1122" height="1402" fetchpriority="high" alt="">
+            <img class="hero-photo hero-photo-visor" src="assets/model-visor-on.webp"
+              srcset="assets/model-visor-on-mobile.webp 650w, assets/model-visor-on.webp 1122w"
+              sizes="(max-width: 760px) 90vw, 55vw" width="1122" height="1402"
+              alt="Ash-gray shell jacket, visor, face cover and black crossbody bag">
+            <button class="hotspot" type="button" data-spot="hood" aria-label="Show hood details" aria-controls="hotspot-detail" aria-expanded="false" style="--spot-x: 46%; --spot-y: 9%"><span aria-hidden="true"></span></button>
+            <button class="hotspot" type="button" data-spot="visor" aria-label="Show visor details" aria-controls="hotspot-detail" aria-expanded="false" style="--spot-x: 61%; --spot-y: 18%"><span aria-hidden="true"></span></button>
+            <button class="hotspot" type="button" data-spot="face-cover" aria-label="Show face cover details" aria-controls="hotspot-detail" aria-expanded="false" style="--spot-x: 37%; --spot-y: 28%"><span aria-hidden="true"></span></button>
+            <button class="hotspot" type="button" data-spot="shell" aria-label="Show shell details" aria-controls="hotspot-detail" aria-expanded="false" style="--spot-x: 69%; --spot-y: 44%"><span aria-hidden="true"></span></button>
+            <button class="hotspot" type="button" data-spot="bag" aria-label="Show bag details" aria-controls="hotspot-detail" aria-expanded="false" style="--spot-x: 53%; --spot-y: 74%"><span aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Modular city rainwear</p>
+          <h1 id="hero-title">Rain<br> line<span class="title-period">.</span></h1>
+          <p class="hero-description">Five pieces for a wet commute.</p>
+          <a class="button button-dark" href="#system">Explore the system</a>
+        </div>
+        <div class="hero-controls">
+          <button class="hero-visor-toggle" id="hero-visor-toggle" type="button" aria-pressed="false">
+            <span class="visor-switch" aria-hidden="true"></span>
+            <span id="hero-visor-label">Put the visor on</span>
+          </button>
+          <a class="text-link hero-compare-link" href="#visor-comparison">Compare looks</a>
+        </div>
+        <div class="hotspot-detail" id="hotspot-detail" hidden>
+          <div><strong id="hotspot-title"></strong><p id="hotspot-copy"></p></div>
+          <a class="text-link" id="hotspot-link" href="#system">Take a closer look</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="site-ticker" id="gear-ticker" aria-label="Gear components">
+      <div class="ticker-window" aria-hidden="true">
+        <div class="ticker-track">
+          <div class="ticker-line"><span>Hood</span><span>Visor</span><span>Face cover</span><span>Outer shell</span><span>Crossbody bag</span></div>
+          <div class="ticker-line"><span>Hood</span><span>Visor</span><span>Face cover</span><span>Outer shell</span><span>Crossbody bag</span></div>
+        </div>
+      </div>
+      <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the scrolling strip" aria-pressed="false"><span aria-hidden="true"></span></button>
+    </div>
+
+    <section class="system-section" id="system" aria-labelledby="system-title">
+      <div class="section-bound system-intro" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Rain Line</p>
+        <h2 id="system-title">The rain starts.<br> The city keeps moving<span class="title-period">.</span></h2>
+        <div class="system-intro-aside">
+          <p>From the hood to the crossbody bag, each piece has a role on the way.</p>
+          <a class="text-link" href="#gear-hood">Explore all five pieces</a>
+        </div>
+      </div>
+      <div class="story" id="gear-story">
+        <div class="story-visual">
+          <figure class="story-frame" id="story-frame" data-part="hood">
+            <div class="story-image-plane">
+              <img class="story-image" src="assets/model-visor-on.webp" width="1122" height="1402" loading="lazy"
+                alt="Model wearing a hood, visor, face cover, shell and crossbody bag">
+            </div>
+            <div class="story-reticle" aria-hidden="true"></div>
+            <div class="story-corner story-corner-top" aria-hidden="true"></div>
+            <div class="story-corner story-corner-bottom" aria-hidden="true"></div>
+            <figcaption class="story-caption">
+              <span id="story-index">1 / 5</span>
+              <span id="story-label">Hood</span>
+            </figcaption>
+          </figure>
+          <nav class="story-nav" aria-label="Jump to a piece">
+            <a href="#gear-hood" aria-label="Hood" data-story-link="hood" aria-current="step"><span></span></a>
+            <a href="#gear-visor" aria-label="Visor" data-story-link="visor"><span></span></a>
+            <a href="#gear-face-cover" aria-label="Face cover" data-story-link="face-cover"><span></span></a>
+            <a href="#gear-shell" aria-label="Outer shell" data-story-link="shell"><span></span></a>
+            <a href="#gear-bag" aria-label="Crossbody bag" data-story-link="bag"><span></span></a>
+          </nav>
+        </div>
+        <div class="story-steps">
+          <article class="story-step" id="gear-hood" data-story="hood">
+            <div class="story-step-content">
+              <p class="story-category">Head coverage</p>
+              <h3>Hood</h3>
+              <p>The shaped brim frames your face. Use the side cords to adjust the fit.</p>
+              <ul><li>Adjustable side cords</li><li>Extended brim</li></ul>
+            </div>
+          </article>
+          <article class="story-step" id="gear-visor" data-story="visor">
+            <div class="story-step-content">
+              <p class="story-category">Visibility</p>
+              <h3>Visor</h3>
+              <p>The smoke-tinted visor fits under the hood as a separate piece.</p>
+              <ul><li>One-piece smoke-tinted lens</li><li>Adjustable strap</li></ul>
+            </div>
+          </article>
+          <article class="story-step" id="gear-face-cover" data-story="face-cover">
+            <div class="story-step-content">
+              <p class="story-category">Face coverage</p>
+              <h3>Face cover</h3>
+              <p>A removable fabric cover wraps around the nose and mouth.</p>
+              <ul><li>Soft fabric edge</li><li>Wear it separately from the visor</li></ul>
+            </div>
+          </article>
+          <article class="story-step" id="gear-shell" data-story="shell">
+            <div class="story-step-content">
+              <p class="story-category">Outer layer</p>
+              <h3>Outer shell</h3>
+              <p>A relaxed-fit jacket with room for different layers on rainy days.</p>
+              <ul><li>Full-length zipper</li><li>Zippered side pockets</li></ul>
+            </div>
+          </article>
+          <article class="story-step" id="gear-bag" data-story="bag">
+            <div class="story-step-content">
+              <p class="story-category">Carry</p>
+              <h3>Crossbody bag</h3>
+              <p>The main compartment sits in front. Adjust the strap to fit over your jacket.</p>
+              <ul><li>Adjustable shoulder strap</li><li>Front-access zipper</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare-section" id="visor-comparison" aria-labelledby="compare-title">
+      <div class="section-bound compare-layout">
+        <div class="compare-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Visor comparison</p>
+          <h2 id="compare-title">Gear on.<br> Gear off<span class="title-period">.</span></h2>
+          <p>Compare the same jacket with and without the visor and face cover.</p>
+          <div class="compare-controls" role="group" aria-label="Appearance options">
+            <button type="button" data-compare="100" aria-pressed="false">On</button>
+            <button type="button" data-compare="0" aria-pressed="false">Off</button>
+          </div>
+        </div>
+        <figure class="compare-figure">
+          <div class="compare-stage" id="compare-stage">
+            <img class="compare-photo" src="assets/comparison-uncovered.webp" width="900" height="1124" loading="lazy" alt="Hooded model with the visor and face cover removed">
+            <img class="compare-photo compare-overlay" src="assets/comparison-covered.webp" width="900" height="1124" loading="lazy" alt="Hooded model wearing the visor and face cover">
+            <span class="compare-tag compare-tag-left" aria-hidden="true">On</span>
+            <span class="compare-tag compare-tag-right" aria-hidden="true">Off</span>
+            <div class="compare-line" aria-hidden="true"><span class="compare-grip"><i></i><i></i><i></i></span></div>
+            <input type="range" class="compare-input" id="compare-range" min="0" max="100" value="50"
+              aria-label="Visor and face cover comparison" aria-describedby="compare-help"
+              aria-valuetext="Visor and face cover on across 50% of the image">
+          </div>
+          <figcaption id="compare-help">Drag the handle to compare the two looks.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="route-section" id="rain-chamber" aria-labelledby="route-title" data-weather="downpour">
+      <canvas class="rain-canvas" id="rain-canvas" aria-hidden="true"></canvas>
+      <div class="section-bound route-layout">
+        <div class="route-copy" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Rain simulation</p>
+            <h2 id="route-title">Rain<br> chamber<span class="title-period">.</span></h2>
+          </div>
+          <fieldset class="weather-controls">
+            <legend class="sr-only">Choose a weather condition</legend>
+            <label><input type="radio" name="weather" value="drizzle"><span>Drizzle</span></label>
+            <label><input type="radio" name="weather" value="downpour" checked><span>Downpour</span></label>
+            <label><input type="radio" name="weather" value="wind"><span>Wind</span></label>
+          </fieldset>
+        </div>
+        <dl class="route-details" aria-live="polite" aria-atomic="true" data-reveal>
+          <div><dt>Simulated raindrops</dt><dd id="weather-density">140</dd></div>
+          <div><dt>Angle from vertical</dt><dd id="weather-angle">8°</dd></div>
+          <div><dt>Outer layer</dt><dd id="weather-shell">Hooded shell</dd></div>
+          <div><dt>Face coverage</dt><dd id="weather-face">Visor + face cover</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section-bound collection-section" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading" data-reveal>
+        <div>
+          <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Concept collection</p>
+          <h2 id="collection-title">Choose your kit<span class="title-period">.</span></h2>
+        </div>
+        <p class="section-description">Choose a size and add one of three sets to your kit.</p>
+      </div>
+      <div class="collection-grid" data-reveal>
+        <article class="product">
+          <div class="product-media product-media-shell"><img src="assets/shell-jacket.webp" width="724" height="724" loading="lazy" alt="Ash-gray rain shell with an adjustable hood"></div>
+          <div class="product-body">
+            <p class="product-meta">Outer layer</p>
+            <h3>Shell jacket</h3>
+            <p>Hooded outer shell.</p>
+            <fieldset class="size-picker">
+              <legend>Size</legend>
+              <label><input type="radio" name="size-kabuk" value="S"><span>S</span></label>
+              <label><input type="radio" name="size-kabuk" value="M" checked><span>M</span></label>
+              <label><input type="radio" name="size-kabuk" value="L"><span>L</span></label>
+              <label><input type="radio" name="size-kabuk" value="XL"><span>XL</span></label>
+            </fieldset>
+            <div class="product-actions">
+              <button class="button button-dark" type="button" data-add="kabuk">Add to kit<span class="button-plus" aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </article>
+        <article class="product product-featured">
+          <div class="product-media product-media-urban">
+            <img src="assets/model-visor-off.webp" width="1122" height="1402" loading="lazy" alt="Ash-gray shell jacket with a graphite crossbody bag">
+          </div>
+          <div class="product-body">
+            <p class="product-meta">Outer layer and carry</p>
+            <h3>Shell + bag</h3>
+            <p>Hooded shell and crossbody bag.</p>
+            <fieldset class="size-picker">
+              <legend>Size</legend>
+              <label><input type="radio" name="size-kabuk-canta" value="S"><span>S</span></label>
+              <label><input type="radio" name="size-kabuk-canta" value="M" checked><span>M</span></label>
+              <label><input type="radio" name="size-kabuk-canta" value="L"><span>L</span></label>
+              <label><input type="radio" name="size-kabuk-canta" value="XL"><span>XL</span></label>
+            </fieldset>
+            <div class="product-actions">
+              <button class="button button-red" type="button" data-add="kabuk-canta">Add to kit<span class="button-plus" aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media product-media-full">
+            <img src="assets/model-visor-on.webp" width="1122" height="1402" loading="lazy" alt="Complete AKINTI kit with visor, face cover, hooded shell and crossbody bag">
+          </div>
+          <div class="product-body">
+            <p class="product-meta">Five components</p>
+            <h3>Full AKINTI kit</h3>
+            <p>Hooded shell, crossbody bag, visor and face cover.</p>
+            <fieldset class="size-picker">
+              <legend>Size</legend>
+              <label><input type="radio" name="size-tam-set" value="S"><span>S</span></label>
+              <label><input type="radio" name="size-tam-set" value="M" checked><span>M</span></label>
+              <label><input type="radio" name="size-tam-set" value="L"><span>L</span></label>
+              <label><input type="radio" name="size-tam-set" value="XL"><span>XL</span></label>
+            </fieldset>
+            <div class="product-actions">
+              <button class="button button-dark" type="button" data-add="tam-set">Add to kit<span class="button-plus" aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <details class="single-pieces">
+        <summary>Choose individual pieces</summary>
+        <div><p>Crossbody bag</p><button class="button button-dark" type="button" data-add="canta">Add to kit<span class="button-plus" aria-hidden="true"></span></button></div>
+        <div><p>Visor and face cover</p><button class="button button-dark" type="button" data-add="siper">Add to kit<span class="button-plus" aria-hidden="true"></span></button></div>
+      </details>
+      <p class="sr-only" id="selection-status" role="status"></p>
+    </section>
+
+    <section class="section section-bound field-section" id="field-notes" aria-labelledby="field-title">
+      <div class="section-heading" data-reveal>
+        <h2 id="field-title">Field notes.</h2>
+      </div>
+      <div class="field-grid" data-reveal>
+        <article class="field-note">
+          <button type="button" class="note-button" data-note="layers" aria-haspopup="dialog">
+            <img src="assets/rain-street-mobile.webp" width="960" height="640" loading="lazy" alt="">
+            <span class="note-title">Layering for a rainy day <span class="button-plus" aria-hidden="true"></span></span>
+          </button>
+        </article>
+        <article class="field-note">
+          <button type="button" class="note-button" data-note="visor-care" aria-haspopup="dialog">
+            <img src="assets/visor-detail.webp" width="720" height="720" loading="lazy" alt="">
+            <span class="note-title">Taking care of your visor <span class="button-plus" aria-hidden="true"></span></span>
+          </button>
+        </article>
+        <article class="field-note">
+          <button type="button" class="note-button" data-note="carry" aria-haspopup="dialog">
+            <img src="assets/crossbody-bag.webp" width="724" height="724" loading="lazy" alt="">
+            <span class="note-title">Keeping your bag close <span class="button-plus" aria-hidden="true"></span></span>
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-bound">
+      <div class="footer-main">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Interest list</p>
+          <h2>The next drop<span class="title-period">.</span></h2>
+        </div>
+        <form id="interest-form" class="interest-form">
+          <label for="interest-email">Email address</label>
+          <div class="form-input-row">
+            <input type="email" id="interest-email" name="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+            <button type="submit" class="button button-red">Join list</button>
+          </div>
+          <p id="interest-status" role="status">This demo saves your entry in this browser.</p>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <a class="brand" href="#home" aria-label="AKINTI, home"><span class="brand-mark" aria-hidden="true"></span><span>AKINTI</span></a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a class="text-link" href="#system">System</a>
+          <a class="text-link" href="#collection">Collection</a>
+          <a class="text-link" href="#home">Back to top</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-word" aria-hidden="true">AKINTI</div>
+  </footer>
+
+  <dialog class="selection-dialog" id="selection-dialog" aria-labelledby="selection-title">
+    <div class="dialog-header">
+      <h2 id="selection-title">My kit</h2>
+      <form method="dialog"><button type="submit" class="icon-button" aria-label="Close kit"><span class="close-icon" aria-hidden="true"></span></button></form>
+    </div>
+    <div class="selection-content">
+      <p id="selection-empty">Your kit is empty.</p>
+      <ul class="selection-items" id="selection-items"></ul>
+    </div>
+    <div class="dialog-footer">
+      <p id="selection-storage">Your kit is saved in this browser.</p>
+      <a href="#collection" class="button button-dark" id="back-to-collection">Back to the collection</a>
+    </div>
+  </dialog>
+
+  <dialog class="note-dialog" id="note-dialog" aria-labelledby="note-dialog-title">
+    <div class="dialog-header">
+      <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Field note</p>
+      <form method="dialog"><button type="submit" class="icon-button" aria-label="Close note"><span class="close-icon" aria-hidden="true"></span></button></form>
+    </div>
+    <div class="note-dialog-content">
+      <img id="note-dialog-image" src="assets/rain-street-mobile.webp" width="960" height="640" alt="">
+      <h2 id="note-dialog-title"></h2>
+      <div id="note-dialog-body"></div>
+    </div>
+  </dialog>
+</body>
+</html>
